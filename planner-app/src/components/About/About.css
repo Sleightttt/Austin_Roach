@@ -5,5 +5,70 @@
   border-radius: 50px;
   flex-direction: row;
   overflow: hidden;
-  background-color: #dce0ff;
+  background: #f2f3f7;
+  box-shadow: inset 20px 20px 60px #cecfd2, inset -20px -20px 60px #ffffff;
+}
+
+.name-h {
+  font-family: "Tittilium Web", sans-serif;
+  font-weight: 100;
+  overflow: wrap;
+}
+.aboutnav-cont {
+  margin: 5%;
+  display: flex;
+  flex-direction: column;
+  text-overflow: wrap;
+  text-align: left;
+}
+
+.about-body {
+  font-family: "Montserrat", sans-serif;
+  margin: 5%;
+}
+
+.me {
+  height: 30%;
+  width: 100%;
+  border-radius: 100px;
+  object-fit: cover;
+}
+
+.slide-left {
+  animation: slideLeft 1s ease forwards;
+}
+
+.slide-right {
+  animation: slideRight 1s ease forwards;
+}
+.fade-in {
+  opacity: 1; /* Fading in */
+  transition: opacity 0.5s ease; /* Smooth transition for opacity */
+}
+
+.fade-out {
+  opacity: 0; /* Fading out */
+  transition: opacity 0.5s ease; /* Smooth transition for opacity */
+}
+
+@keyframes slideLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }

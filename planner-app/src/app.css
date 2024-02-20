@@ -38,7 +38,7 @@ html {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   object-fit: cover;
   z-index: 0; /* Set a lower z-index to position it behind other content */
   overflow: hidden; /* Hide overflow if the video size exceeds the viewport */
