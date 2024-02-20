@@ -1,10 +1,35 @@
 .nav-box {
+  position: relative; /* Position the container relative to its normal position */
   display: flex;
   justify-content: center;
-  /* background-color: red; */
   height: 100px;
   margin: 5px;
   font-family: "Montserrat", sans-serif;
+}
+
+.logo-cont {
+  position: absolute; /* Position the logo container absolutely */
+  top: 0; /* Align to the top of the nav-box */
+  left: 0; /* Align to the left of the nav-box */
+  width: 10%; /* Adjust width as needed */
+  font-size: 1rem;
+
+  transition: 0.3s;
+}
+
+.logo-cont:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  filter: invert(88%) sepia(93%) saturate(758%) hue-rotate(200deg)
+    brightness(96%) contrast(95%);
+}
+.logo-text {
+  color: #deebff;
+  font-weight: bold;
+}
+.logo-link {
+  text-decoration: none; /* Remove default underline */
+  color: inherit; /* Inherit the color from the parent */
 }
 
 .nav-cont {
@@ -12,29 +37,45 @@
   justify-content: space-around;
   align-items: center;
   flex-direction: row;
-  border: 2px solid black;
+  border: 1px solid black;
   width: 80%;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 20px;
+  background: linear-gradient(145deg, #6876e6, #7b8cff);
+  box-shadow: 2px 2px 6px #626fd9, -20px -20px 60px #8497ff;
 }
 
 .nav-icon {
   height: 50%;
-  object-fit: cover;
+  object-fit: contain;
+  filter: invert(88%) sepia(3%) saturate(758%) hue-rotate(200deg)
+    brightness(96%) contrast(95%);
+  transition: 0.3s;
 }
 
 .icon-cont {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
+  text-wrap: wrap;
   justify-content: space-around;
   height: 100%;
   align-content: center;
   transition: 0.3s;
+  text-decoration: none;
 }
 
 .icon-cont:hover {
   cursor: pointer;
   transform: scale(1.1);
-  transition: 0.3s;
+  filter: invert(88%) sepia(93%) saturate(758%) hue-rotate(200deg)
+    brightness(96%) contrast(95%);
+}
+
+@media screen and (max-width: 876px) {
+  .logo-cont {
+    top: 4px;
+    font-size: 0.5rem; /* Adjust font size for smaller screens */
+    height: 100%;
+  }
 }

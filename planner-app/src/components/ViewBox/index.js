@@ -1,12 +1,8 @@
 import React from "react";
 import "./ViewBox.css";
 
-const ViewBox = () => {
-  return (
-    <div className="view-box">
-      <h1>ViewBoxx</h1>
-    </div>
-  );
+const ViewBox = ({ children }) => {
+  return <div className="view-box">{children}</div>;
 };
 
 export default ViewBox;
