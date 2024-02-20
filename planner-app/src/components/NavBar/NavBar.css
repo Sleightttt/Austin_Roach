@@ -40,8 +40,8 @@
   border: 1px solid rgb(7, 0, 57);
   width: 80%;
   border-radius: 20px;
-  background: #dce0ff;
-  box-shadow: 20px 2px 60px #bbbed9, -20px -2px 20px #d8e3ff;
+  background: #f2f3f7;
+  box-shadow: 2px 2px 6px #f5f6fe, -2px -2px 22px #d8e3ff;
 }
 
 .nav-icon {
