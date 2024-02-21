@@ -5,8 +5,8 @@
   border-radius: 50px;
   flex-direction: row;
   overflow: hidden;
-  background: #f2f3f7;
-  box-shadow: inset 20px 20px 60px #cecfd2, inset -20px -20px 60px #ffffff;
+  background: #eeeeee;
+  box-shadow: inset 10px 20px 50px #f0f3fb, inset -20px -20px 50px #f7f8f8;
 }
 
 .name-h {
@@ -14,17 +14,21 @@
   font-weight: 100;
   overflow: wrap;
 }
+.name-h2 {
+  font-family: "Tittilium Web", sans-serif;
+  font-weight: 400;
+  overflow: wrap;
+}
 .aboutnav-cont {
   margin: 5%;
   display: flex;
   flex-direction: column;
-  text-overflow: wrap;
-  text-align: left;
 }
 
 .about-body {
   font-family: "Montserrat", sans-serif;
   margin: 5%;
+  font-size: 1.1rem;
 }
 
 .me {
@@ -70,5 +74,11 @@
   to {
     transform: translateX(0);
     opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-body {
+    font-size: 0.8rem;
   }
 }
