@@ -21,8 +21,9 @@
   transform: scale(1.05);
 }
 .logo-text {
-  color: #1b1b1b;
+  color: #009bef;
   font-weight: 300;
+  font-size: 1.1rem;
 }
 .logo-link > .logo-text {
   font-weight: bold;
@@ -47,7 +48,6 @@
 .nav-icon {
   height: 50%;
   object-fit: contain;
-
   transition: 0.3s;
 }
 

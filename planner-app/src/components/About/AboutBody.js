@@ -1,14 +1,13 @@
 import { Link } from "react-router-dom";
-import me from "../../assets/images/me.jpg";
+import icons from "../../assets/icons";
 const AboutBody = () => {
   return (
     <div className="about-body">
-      <img className="me" src={me} />
-      <p>
-        <span style={{ fontWeight: "bold" }}>Thank you</span> for checking out
-        my portfolio! I am a software engineer with experience in building web
-        applications from the ground up, who always finds zeal in debugging
-        errors and finding more efficient approach to problems.
+      <p style={{ marginTop: "7px" }}>
+        <span style={{ fontWeight: "bold", color: "#009bef" }}>Thank you</span>{" "}
+        for checking out my portfolio! I am a software engineer with experience
+        in building web applications from the ground up, who always finds zeal
+        in debugging errors and finding more efficient approach to problems.
       </p>
 
       <p>
@@ -29,6 +28,11 @@ const AboutBody = () => {
         camping adventures to various mountainous terrains, and discover new
         restaurants that awaken my palate.
       </p>
+      <div className="about-icon-cont">
+        <img className="about-icon" src={icons.forest} alt="Projects" />
+        <img className="about-icon" src={icons.console} alt="Projects" />
+        <img className="about-icon" src={icons.hockey} alt="Projects" />
+      </div>
     </div>
   );
 };

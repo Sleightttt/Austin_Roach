@@ -33,16 +33,16 @@ const AboutNav = () => {
 
   return (
     <div className="aboutnav-cont">
-      <h1 className={`name-h slide-left ${fadeIn ? "fade-in" : "fade-out"}`}>
+      <div className={`name-h slide-left ${fadeIn ? "fade-in" : "fade-out"}`}>
         Brennan Cota
-      </h1>
-      <h1
+      </div>
+      <div
         className={`name-h2 ${initialLoad ? "slide-right" : ""} ${
           fadeIn ? "fade-in" : "fade-out"
         }`}
       >
         {titles[currentTitleIndex]}
-      </h1>
+      </div>
     </div>
   );
 };
