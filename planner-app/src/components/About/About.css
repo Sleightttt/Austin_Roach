@@ -109,6 +109,15 @@
   }
 }
 
+@media (max-width: 540px) {
+  .about-body {
+    font-size: 0.7rem;
+  }
+  .about-icon {
+    height: 30px;
+  }
+}
+
 @media (max-width: 830px) {
   .about-body {
     font-size: 0.8rem;
@@ -119,19 +128,16 @@
   .about-body {
     font-size: 1.3rem;
   }
-}
-
-@media (max-width: 540px) {
-  .about-body {
-    font-size: 0.7rem;
-  }
   .about-icon {
-    height: 30px;
+    height: 80px;
   }
 }
 
-@media (min-width: 1500px) {
+@media (min-width: 1650px) {
   .about-body {
     font-size: 1.6rem;
+  }
+  .about-icon {
+    height: 100px;
   }
 }
