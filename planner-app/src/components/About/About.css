@@ -125,6 +125,9 @@
   .about-body {
     font-size: 0.7rem;
   }
+  .about-icon {
+    height: 30px;
+  }
 }
 
 @media (min-width: 1500px) {

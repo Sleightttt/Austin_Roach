@@ -5,6 +5,7 @@ import information from "./information.png";
 import console from "./console.png";
 import forest from "./forest.png";
 import hockey from "./hockey.png";
+import ghost from "./ghost.png";
 
 export default {
   blueprint,
@@ -14,4 +15,5 @@ export default {
   console,
   forest,
   hockey,
+  ghost,
 };
