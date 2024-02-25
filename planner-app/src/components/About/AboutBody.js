@@ -13,7 +13,7 @@ const AboutBody = () => {
       <p>
         {" "}
         I graduated from App Academy, a highly selective software engineer
-        program, where I spent more than 100 hours per week learning and
+        program, where I spent more than 60 hours per week learning and
         mastering my skills in different technologies and computer languages.
         Though challenging, it invigorated my passion for problem solving and
         the desire to keep learning and building my knowledge to become the most
