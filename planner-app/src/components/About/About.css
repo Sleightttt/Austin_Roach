@@ -5,7 +5,7 @@
   border-radius: 50px;
   flex-direction: row;
   overflow: hidden;
-  background: #eeeeee;
+  text-shadow: 1px 1px 2px rgba(78, 78, 78, 0.2);
   box-shadow: inset 10px 20px 50px #f0f3fb, inset -20px -20px 50px #f7f8f8;
 }
 

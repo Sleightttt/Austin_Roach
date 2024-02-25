@@ -24,9 +24,10 @@ const AboutBody = () => {
       </p>
 
       <p>
-        When I am not coding, I love to indulge myself with horror films, go on
-        camping adventures to various mountainous terrains, game on all systems,
-        and discover new restaurants that awaken my palate.
+        When I am not coding, I love to indulge myself with horror films, watch
+        and play hockey, go on camping adventures to various mountainous
+        terrains, game on all systems, and discover new restaurants that awaken
+        my palate.
       </p>
       <div className="about-icon-cont">
         <img className="about-icon" src={icons.ghost} alt="Ghost icon" />
