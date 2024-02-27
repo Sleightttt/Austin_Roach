@@ -14,7 +14,7 @@ function App() {
   return (
     <div className="App">
       <div className="video-background2">
-        <img src={snow} />
+        <img draggable="false" className="no" src={snow} />
       </div>
       <NavBar />
       <ViewBox>

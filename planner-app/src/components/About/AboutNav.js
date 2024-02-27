@@ -43,6 +43,7 @@ const AboutNav = () => {
       >
         {titles[currentTitleIndex]}
       </div>
+      <div className="bg-rounded-square"></div>
     </div>
   );
 };

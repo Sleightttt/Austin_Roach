@@ -9,11 +9,28 @@
   box-shadow: inset 10px 20px 50px #f0f3fb, inset -20px -20px 50px #f7f8f8;
 }
 
+.bg-rounded-square {
+  position: absolute;
+  /* Adjust as needed for the offset */
+  /* Adjust as needed for the offset */
+  width: 130%;
+  left: -15%; /* Adjust width as needed */
+  height: 40%; /* Adjust height as needed */
+  background-color: #00a5fe0e; /* Adjust background color as needed */
+  /* border: #009bef1b 2px solid; */
+  box-shadow: #d1d1d180 0px 0px 20px 12px; /* Adjust shadow as needed */
+  border-radius: 50px;
+  /* Adjust border radius as needed */
+  z-index: -1; /* Ensure it's behind other content */
+}
 .name-h {
   font-family: "Tittilium Web", sans-serif;
   font-weight: 400;
   font-size: 3rem;
   overflow: wrap;
+  color: rgb(50, 50, 50);
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.207);
+  letter-spacing: 1px;
 }
 .name-h2 {
   font-family: "Tittilium Web", sans-serif;
@@ -24,6 +41,7 @@
   color: #009bef;
 }
 .aboutnav-cont {
+  position: relative;
   margin: 5%;
   display: flex;
   flex-direction: column;

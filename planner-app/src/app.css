@@ -42,6 +42,7 @@ html {
   object-fit: cover;
   z-index: 0;
   overflow: hidden;
+  user-select: none;
 }
 
 .video-background2 img {
