@@ -1,0 +1,117 @@
+.contact-cont {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  flex-direction: column;
+  align-items: center;
+
+  overflow: hidden;
+  text-shadow: 1px 1px 2px rgba(78, 78, 78, 0.2);
+  box-shadow: inset 10px 20px 50px #f0f3fb, inset -20px -20px 50px #f7f8f8;
+}
+
+.body-entry {
+  opacity: 0;
+}
+
+.reach-me {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 20%;
+  border-radius: 50px;
+}
+
+.reach-me-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+
+  width: 80%;
+  height: 70%;
+  border-radius: 50px;
+}
+
+.slide-in {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.top {
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+}
+
+.bottom {
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+.reach-icon-box img {
+  filter: invert(100%); /* Invert the colors to make the icon white */
+}
+
+.body-entry {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  height: 90px;
+  width: 300px;
+  border: 1px solid black;
+  background-color: #009bef;
+  transition-behavior: smooth;
+  transition-delay: 0ms;
+}
+
+.body-entry:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.reach-me-text {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+  overflow: wrap;
+  color: rgb(50, 50, 50);
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.207);
+  letter-spacing: 1px;
+}
+
+.anchor-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.anchor-link:hover {
+  text-decoration: none;
+  color: gainsboro;
+}
+
+.entry-text {
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  width: 80%;
+}
+
+.reach-icon-box {
+  width: 20%; /* Adjust the width as needed */
+  height: 40px; /* Adjust the height as needed */
+  display: inline-block; /* Ensures proper alignment with text */
+  vertical-align: middle;
+  margin-left: 10px;
+}
+
+.reach-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: 0.3s;
+}

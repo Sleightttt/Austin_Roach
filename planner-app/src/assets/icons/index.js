@@ -6,6 +6,11 @@ import console from "./console.png";
 import forest from "./forest.png";
 import hockey from "./hockey.png";
 import ghost from "./ghost.png";
+import mobile from "./mobile.png";
+import resume from "./resume.png";
+import mail from "./mail.png";
+import linkedin from "./linkedin.png";
+import logo from "./logo.png";
 
 export default {
   blueprint,
@@ -16,4 +21,9 @@ export default {
   forest,
   hockey,
   ghost,
+  mobile,
+  resume,
+  mail,
+  linkedin,
+  logo,
 };
