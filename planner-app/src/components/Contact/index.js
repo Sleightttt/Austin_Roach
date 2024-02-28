@@ -56,7 +56,7 @@ const Contact = () => {
               href={require("../../assets/Resume.pdf")}
               download="Resume.pdf"
             >
-              Resume
+              Resume Download
             </a>
           </div>
         </div>
