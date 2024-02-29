@@ -11,18 +11,14 @@
 
 .bg-rounded-square {
   position: absolute;
-  /* Adjust as needed for the offset */
-  /* Adjust as needed for the offset */
   width: 130%;
   top: -2%;
-  left: -15%; /* Adjust width as needed */
-  height: 40%; /* Adjust height as needed */
-  background-color: #156c9b; /* Adjust background color as needed */
-  /* border: #009bef1b 2px solid; */
+  left: -15%;
+  height: 40%;
+  background-color: #156c9b;
   box-shadow: 20px 20px 60px #c9c9c9, -20px -20px 60px #e1e1e1;
   border-radius: 50px;
-  /* Adjust border radius as needed */
-  z-index: 1; /* Ensure it's behind other content */
+  z-index: 1;
 }
 .name-h {
   font-family: "Tittilium Web", sans-serif;

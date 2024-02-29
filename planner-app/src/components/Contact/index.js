@@ -40,13 +40,13 @@ const Contact = () => {
         </div>
         <div className="body-entry">
           <div className="reach-icon-box">
-            <img className="reach-icon" src={icons.mail} alt="phone" />
+            <img className="reach-icon" src={icons.mail} alt="email" />
           </div>
           <div className="entry-text">brennancota@yahoo.com</div>
         </div>
         <div className="body-entry">
           <div className="reach-icon-box">
-            <img className="reach-icon" src={icons.linkedin} alt="phone" />
+            <img className="reach-icon" src={icons.linkedin} alt="linkedin" />
           </div>
           <div className="entry-text">
             <a
@@ -61,7 +61,7 @@ const Contact = () => {
         </div>
         <div className="body-entry">
           <div className="reach-icon-box">
-            <img className="reach-icon" src={icons.resume} alt="phone" />
+            <img className="reach-icon" src={icons.resume} alt="resume" />
           </div>
           <div className="entry-text">
             <a
@@ -75,7 +75,7 @@ const Contact = () => {
         </div>
         <div className="body-entry bottom">
           <div className="reach-icon-box">
-            <img className="reach-icon" src={icons.logo} alt="phone" />
+            <img className="reach-icon" src={icons.logo} alt="github" />
           </div>
           <div className="entry-text">
             {" "}
