@@ -1,5 +1,6 @@
 import "./Projects.css";
 import imagespace from "../../assets/images/ImageSpace-demo-pic.png";
+import icons from "../../assets/icons/index.js";
 
 const Projects = () => {
   return (
@@ -25,10 +26,20 @@ const Projects = () => {
       </div>
       <div className="about-box">
         <div className="image-cont">
+          <img
+            alt="imagespace"
+            className="project-arrow"
+            src={icons.leftArrow}
+          />
           <img alt="imagespace" className="project-image" src={imagespace} />
+          <img
+            alt="imagespace"
+            className="project-arrow"
+            src={icons.rightArrow}
+          />
         </div>
 
-        <div className="about-body minus-one">
+        <div className="about-body2">
           A Flickr clone with 5 working CRUD features built using a React
           frontend with a Flask backend. Imagespace features an auto-tagging
           feature by implementing the AI image recognition API Imagga. Users can

@@ -11,6 +11,8 @@ import resume from "./resume.png";
 import mail from "./mail.png";
 import linkedin from "./linkedin.png";
 import logo from "./logo.png";
+import leftArrow from "./left-arrow.png";
+import rightArrow from "./right-arrow.png";
 
 export default {
   blueprint,
@@ -26,4 +28,6 @@ export default {
   mail,
   linkedin,
   logo,
+  leftArrow,
+  rightArrow,
 };
