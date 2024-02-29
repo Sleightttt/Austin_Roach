@@ -6,6 +6,7 @@ const AboutNav = () => {
     "Full Stack Software Engineer",
     "Front End Engineer",
     "U/X Designer",
+    "Mobile Developer",
   ];
   const [currentTitleIndex, setCurrentTitleIndex] = useState(0);
   const [fadeIn, setFadeIn] = useState(false); // Initially set to false
