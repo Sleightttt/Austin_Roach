@@ -28,7 +28,7 @@ const Contact = () => {
     <div className="contact-cont">
       <div className="reach-me">
         <div className="reach-me-text">
-          Feel free to reach me in any of the following ways:
+          You can reach me in any of the following ways:
         </div>
       </div>
       <div className="reach-me-body ">
