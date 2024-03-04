@@ -167,16 +167,18 @@ const Projects = () => {
               <img className="git-live-logo" src={icons.logo} />
             </a>
           </div>
-          <div className="git-live-entry">
-            <a
-              href={entryContent[activeEntry].liveLink}
-              target="_blank"
-              className="link"
-            >
-              <div className="link">Live Link</div>
-              <img className="git-live-logo" src={icons.live} />
-            </a>
-          </div>
+          {entryContent[activeEntry].liveLink ? (
+            <div className="git-live-entry">
+              <a
+                href={entryContent[activeEntry].liveLink}
+                target="_blank"
+                className="link"
+              >
+                <div className="link">Live Link</div>
+                <img className="git-live-logo" src={icons.live} />
+              </a>
+            </div>
+          ) : null}
         </div>
         <div className="about-body2">{entryContent[activeEntry].about}</div>
         <div className="tech-cont">
