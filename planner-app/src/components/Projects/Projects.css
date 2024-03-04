@@ -58,7 +58,7 @@
 }
 
 .entry-box-proof {
-  background-color: #474747;
+  background-color: #1e1e1e;
 }
 
 .entry-box-job {
@@ -89,8 +89,9 @@
 
 .image-cont {
   width: 90%;
-  height: 400px;
+  height: 350px;
   margin: 4%;
+  margin-bottom: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -117,7 +118,64 @@
   transition: 0.2s;
 }
 
+.git-live {
+  display: flex;
+  flex-direction: row;
+  width: 30%;
+  text-align: center;
+  align-content: center;
+  justify-content: space-around;
+}
+
+.git-live-entry {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  margin: 0 5px;
+  margin-top: 3px;
+  font-family: "Montserrat", sans-serif;
+  transition: 0.2s;
+  color: #009bef;
+}
+
+.git-live-entry:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.git-live-logo {
+  height: 50px;
+  width: 50px;
+  margin-top: 3px;
+}
+.link {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
 .project-arrow:hover {
   cursor: pointer;
   transform: scale(1.1);
+}
+
+.tracker {
+  display: flex;
+  flex-direction: row;
+  margin-top: 5px;
+}
+
+.tracker-diamond {
+  height: 10px;
+  width: 10px;
 }

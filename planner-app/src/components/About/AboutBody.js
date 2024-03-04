@@ -5,9 +5,13 @@ const AboutBody = () => {
     <div className="about-body">
       <p style={{ marginTop: "7px" }}>
         <span style={{ fontWeight: "bold", color: "#009bef" }}>Thank you</span>{" "}
-        for checking out my portfolio! I am a software engineer with experience
-        in building web applications from the ground up, who always finds zeal
-        in debugging errors and finding more efficient approach to problems.
+        for checking out my portfolio! I am a{" "}
+        <span style={{ fontWeight: "bold", color: "#009bef" }}>
+          software engineer
+        </span>{" "}
+        with experience in building web applications from the ground up, who
+        always finds zeal in debugging errors and finding more efficient
+        approach to problems.
       </p>
 
       <p>

@@ -13,6 +13,9 @@ import linkedin from "./linkedin.png";
 import logo from "./logo.png";
 import leftArrow from "./left-arrow.png";
 import rightArrow from "./right-arrow.png";
+import live from "./live.png";
+import diamond1 from "./diamond.png";
+import diamond2 from "./diamond2.png";
 
 export default {
   blueprint,
@@ -30,4 +33,7 @@ export default {
   logo,
   leftArrow,
   rightArrow,
+  live,
+  diamond1,
+  diamond2,
 };
