@@ -9,7 +9,7 @@ const AboutNav = () => {
     "Mobile Developer",
   ];
   const [currentTitleIndex, setCurrentTitleIndex] = useState(0);
-  const [fadeIn, setFadeIn] = useState(false); // Initially set to false
+  const [fadeIn, setFadeIn] = useState(false);
   const [initialLoad, setInitialLoad] = useState(true);
 
   useEffect(() => {
