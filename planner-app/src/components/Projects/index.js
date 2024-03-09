@@ -7,7 +7,6 @@ import img3 from "../../assets/images/img3.png";
 import img4 from "../../assets/images/img4.png";
 import img5 from "../../assets/images/img5.png";
 import img6 from "../../assets/images/img6.png";
-import test from "../../assets/images/67269.jpg";
 import icons from "../../assets/icons/index.js";
 import job1 from "../../assets/images/jobseeker1.jpeg";
 import job2 from "../../assets/images/jobseeker2.jpeg";
