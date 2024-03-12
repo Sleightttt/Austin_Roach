@@ -19,6 +19,7 @@
   box-shadow: 20px 20px 60px #c9c9c9, -20px -20px 60px #e1e1e1;
   border-radius: 50px;
   z-index: 1;
+  border: 2px solid #009bef;
 }
 .name-h {
   font-family: "Tittilium Web", sans-serif;
