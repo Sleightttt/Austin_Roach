@@ -28,7 +28,7 @@ const Projects = () => {
   const entryContent = {
     image: {
       about:
-        "A Flickr clone with 5 CRUD features built using a React frontend with a Flask backend. Imagespace features an auto-tagging feature by implementing the AI image recognition API Imagga. Users can sign up for accounts, follow and unfollow other users, both like and comment on photos, and upload their own! Imagespace also features a search bar that allows users to search for other users, images, and tags. Users can also edit their own profiles and delete their own images and comments. This website was built with a 'mobile first' approach, and is fully responsive for mobile, tablet, and desktop.",
+        "Imagespace is a Flickr clone with 5 CRUD features built using a React frontend with a Flask backend. Imagespace features an auto-tagging feature by implementing the AI image recognition API Imagga. Users can sign up for accounts, follow and unfollow other users, both like and comment on photos, and upload their own! Imagespace also features a search bar that allows users to search for other users, images, and tags. Users can also edit their own profiles and delete their own images and comments. This website was built with a 'mobile first' approach, and is fully responsive for mobile, tablet, and desktop.",
       githubLink: "https://github.com/Sleightttt/AA-Captstone-Project",
       techIcons: [
         "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg",
@@ -147,6 +147,7 @@ const Projects = () => {
           {entryContent[activeEntry].images.map((image, index) => (
             <div key={index} className="tracker-diamond-box">
               <img
+                alt="tracker diamond"
                 className="tracker-diamond"
                 src={
                   index === currentImageIndex ? icons.diamond2 : icons.diamond1
@@ -163,7 +164,7 @@ const Projects = () => {
               className="link"
             >
               Github Link
-              <img className="git-live-logo" src={icons.logo} />
+              <img alt="git logo" className="git-live-logo" src={icons.logo} />
             </a>
           </div>
           {entryContent[activeEntry].liveLink ? (
@@ -174,7 +175,11 @@ const Projects = () => {
                 className="link"
               >
                 <div className="link">Live Link</div>
-                <img className="git-live-logo" src={icons.live} />
+                <img
+                  alt="live logo"
+                  className="git-live-logo"
+                  src={icons.live}
+                />
               </a>
             </div>
           ) : null}

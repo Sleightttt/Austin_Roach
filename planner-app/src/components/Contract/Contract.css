@@ -1,0 +1,74 @@
+.contract-cont {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  flex-direction: row;
+  overflow: hidden;
+  text-shadow: 1px 1px 2px rgba(78, 78, 78, 0.2);
+  box-shadow: inset 10px 20px 50px #f0f3fb, inset -20px -20px 50px #f7f8f8;
+}
+
+.contract-nav {
+  width: 20%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 2%;
+  margin-left: 3%;
+}
+
+.contract-body {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  font-family: "Tittilium Web", sans-serif;
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+
+.entry-box-c {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 25%;
+  width: 100%;
+  background: linear-gradient(125deg, #19a2eb, #13618c);
+  border-radius: 50px;
+  transition: 0.3s ease-in-out;
+  margin: 5px;
+  box-shadow: 2px 2px 6px #cecfd2, -2px -2px 6px #cacaca;
+  color: white;
+  font-family: "Tittilium Web", sans-serif;
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+
+.entry-box-c:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.body-p {
+  font-family: "Montserrat", sans-serif;
+  margin: 3% 5%;
+  font-size: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.5;
+}
+
+.body-title {
+  font-family: "Tittilium Web", sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+  margin: 3% 5%;
+  color: #00a6ff;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.207);
+}
