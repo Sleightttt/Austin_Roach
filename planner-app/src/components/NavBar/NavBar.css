@@ -71,6 +71,7 @@
 
 .active {
   border-bottom: #009bef 2px solid;
+  transition: 0.2s;
 }
 
 @media screen and (max-width: 876px) {
@@ -82,5 +83,18 @@
 
   .logo-text {
     font-size: rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .nav-box {
+    height: 60px;
+  }
+  .nav-cont {
+    width: 100%;
+  }
+
+  .logo-text {
+    font-size: 1rem;
   }
 }

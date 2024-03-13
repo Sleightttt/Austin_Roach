@@ -14,7 +14,7 @@ const NavBar = () => {
       <div className="nav-cont">
         <Link to="/" className="icon-cont">
           <img className="nav-icon" src={icons.information} alt="Projects" />
-          <div className={`logo-text ${isActive("/")}`}>About Me</div>
+          <div className={`logo-text ${isActive("/")}`}>About</div>
         </Link>
         <Link to="/projects" className="icon-cont">
           <img className="nav-icon" src={icons.blueprint} alt="Projects" />
@@ -22,9 +22,7 @@ const NavBar = () => {
         </Link>
         <Link to="/contract" className="icon-cont">
           <img className="nav-icon" src={icons.contract} alt="Contract Work" />
-          <div className={`logo-text ${isActive("/contract")}`}>
-            Contract Work
-          </div>
+          <div className={`logo-text ${isActive("/contract")}`}>Contract</div>
         </Link>
         <Link to="/contact" className="icon-cont">
           <img className="nav-icon" src={icons.contact} alt="Contact" />

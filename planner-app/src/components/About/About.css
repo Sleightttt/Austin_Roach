@@ -58,6 +58,10 @@
   line-height: 1.3;
 }
 
+.about-p {
+  margin-top: 7px;
+}
+
 .me {
   height: 100%;
   width: 100%;
@@ -130,11 +134,44 @@
 }
 
 @media (max-width: 540px) {
+  .about-cont {
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .aboutnav-cont {
+    margin-bottom: 0;
+  }
   .about-body {
     font-size: 0.7rem;
+    margin-top: 0;
+    text-align: center;
   }
   .about-icon {
     height: 30px;
+  }
+
+  .bg-rounded-square {
+    width: 100%;
+    height: 100%;
+    left: 1%;
+    box-shadow: 10px 10px 10px #c9c9c988, -10px -10px 10px #e1e1e1;
+  }
+
+  .name-h {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .name-h2 {
+    font-size: 0.8rem;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 3px;
+  }
+
+  .about-p {
+    margin-top: 10px;
   }
 }
 
