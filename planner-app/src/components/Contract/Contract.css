@@ -37,7 +37,7 @@
   align-items: center;
   justify-content: center;
   height: 25%;
-  width: 100%;
+  width: 89%;
   background: linear-gradient(125deg, #19a2eb, #13618c);
   border-radius: 50px;
   transition: 0.3s ease-in-out;
@@ -45,8 +45,8 @@
   box-shadow: 2px 2px 6px #cecfd2, -2px -2px 6px #cacaca;
   color: white;
   font-family: "Tittilium Web", sans-serif;
-  font-weight: 400;
-  font-size: 1.2rem;
+  font-weight: 900;
+  font-size: 1.6rem;
 }
 
 .entry-box-c:hover {
