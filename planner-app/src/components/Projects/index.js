@@ -57,7 +57,7 @@ const Projects = () => {
     },
     job: {
       about:
-        "I developed a sophisticated job-seeking app using React Native, featuring a seamless UI for an optimized job search. Utilizing the Axios library and Jsearch API from RapidApi, the app integrates real-time and accurate job data. Prioritizing clean code architecture, I implemented best practices for scalability and performance, employing modularization, code reusability, and responsive design. This project showcases my expertise in software engineering, API integration, and mobile app development, from crafting pixel-perfect UI components to managing asynchronous data fetching and state. It not only meets industry standards but sets a benchmark for user-centric job-seeking solutions, reflecting my commitment to delivering top-tier technical solutions and empowering jobseekers in their career aspirations.",
+        "I developed a sophisticated job-seeking app using React Native, featuring a seamless UI for an optimized job search. Utilizing the Axios library and Jsearch API from RapidApi, the app integrates real-time and accurate job data. Prioritizing clean code architecture, I implemented best practices for scalability and performance, employing modularization, code reusability, and responsive design. This project showcases my expertise in software engineering, API integration, and mobile app development, from crafting pixel-perfect UI components to managing asynchronous data fetching and state. ",
       techIcons: [
         "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
         "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/axios/axios-plain.svg",
