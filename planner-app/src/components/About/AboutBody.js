@@ -1,12 +1,28 @@
 import icons from "../../assets/icons";
 
-const AboutBody = () => {
+const AboutBody = ({ activeTheme }) => {
+  console.log(activeTheme, "----");
+
+  const themeFixer = () => {
+    if (activeTheme === "snow") {
+      return "#009bef";
+    } else if (activeTheme === "summer") {
+      return "#F4653E";
+    } else if (activeTheme === "spring") {
+      return "#C9A100";
+    } else if (activeTheme === "fall") {
+      return "#CA0000";
+    }
+  };
+
   return (
     <div className="about-body">
       <div className="about-p">
-        <span style={{ fontWeight: "bold", color: "#009bef" }}>Thank you</span>{" "}
+        <span style={{ fontWeight: "bold", color: themeFixer() }}>
+          Thank you
+        </span>{" "}
         for checking out my portfolio! I am a{" "}
-        <span style={{ fontWeight: "bold", color: "#009bef" }}>
+        <span style={{ fontWeight: "bold", color: themeFixer() }}>
           software engineer
         </span>{" "}
         with experience in building web applications from the ground up, who

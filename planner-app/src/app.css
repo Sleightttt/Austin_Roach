@@ -49,5 +49,49 @@ html {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transform: scaleY(-1);
+}
+
+.theme {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  position: fixed;
+  right: 20px;
+  bottom: 10px;
+  height: 40px;
+  width: 40px;
+  border-radius: 12px;
+  background-color: white;
+  border: solid 1px #19a2eb;
+  z-index: 2;
+  font-family: "Montserrat", sans-serif;
+}
+
+.theme:hover,
+.theme-icon:hover {
+  cursor: pointer;
+}
+
+.theme-icon {
+  height: 50%;
+  width: 50%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 12px;
+}
+
+.open {
+  height: 100px;
+  width: 100px;
+  flex-direction: column;
+}
+
+.open > div:hover {
+  text-decoration: underline;
+  text-decoration-color: #19a2eb;
+}
+
+.no {
+  transition: 0.2s;
 }

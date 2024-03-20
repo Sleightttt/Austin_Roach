@@ -16,7 +16,7 @@ import rightArrow from "./right-arrow.png";
 import live from "./live.png";
 import diamond1 from "./diamond.png";
 import diamond2 from "./diamond2.png";
-
+import menu from "./menu.png";
 export default {
   blueprint,
   contract,
@@ -36,4 +36,5 @@ export default {
   live,
   diamond1,
   diamond2,
+  menu,
 };

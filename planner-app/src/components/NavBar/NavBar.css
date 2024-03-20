@@ -70,7 +70,7 @@
 }
 
 .active {
-  border-bottom: #009bef 2px solid;
+  /* border-bottom: #009bef 2px solid; */
   transition: 0.2s;
 }
 

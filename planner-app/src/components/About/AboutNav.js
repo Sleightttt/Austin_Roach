@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const AboutNav = () => {
+const AboutNav = ({ activeTheme }) => {
   const titles = [
     "Software Engineer",
     "Full Stack Software Engineer",
@@ -32,6 +32,27 @@ const AboutNav = () => {
     return () => clearInterval(intervalId); // Clean up the interval
   }, [initialLoad]);
 
+  const themeFixer = () => {
+    let boxStyle = {};
+    let textStyle = {};
+    if (activeTheme === "snow") {
+      textStyle.color = "#009bef";
+      boxStyle = { background: "linear-gradient(125deg, #19a2eb, #13618c)" };
+    } else if (activeTheme === "summer") {
+      boxStyle = { background: "linear-gradient(125deg, #FFAADA, #F4653E)" };
+      textStyle.color = "#F4653E";
+    } else if (activeTheme === "spring") {
+      boxStyle = { background: "linear-gradient(125deg, #C9A100, #F4653E)" };
+      textStyle.color = "#C9A100";
+    } else if (activeTheme === "fall") {
+      boxStyle = { background: "linear-gradient(125deg, #CA0000, #F4653E)" };
+      textStyle.color = "#F4653E";
+    }
+    return { textStyle, boxStyle };
+  };
+
+  const { textStyle, boxStyle } = themeFixer();
+
   return (
     <div className="aboutnav-cont">
       <div className={`name-h slide-left ${fadeIn ? "fade-in" : "fade-out"}`}>
@@ -41,10 +62,11 @@ const AboutNav = () => {
         className={`name-h2 ${initialLoad ? "slide-right" : ""} ${
           fadeIn ? "fade-in" : "fade-out"
         }`}
+        style={{ ...textStyle }}
       >
         {titles[currentTitleIndex]}
       </div>
-      <div className="bg-rounded-square"></div>
+      <div className="bg-rounded-square" style={{ ...boxStyle }}></div>
     </div>
   );
 };
