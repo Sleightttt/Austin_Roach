@@ -53,7 +53,7 @@
 }
 
 .reach-icon-box img {
-  filter: invert(100%); /* Invert the colors to make the icon white */
+  filter: invert(100%);
 }
 
 .body-entry {
