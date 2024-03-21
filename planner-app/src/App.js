@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Route, Routes } from "react-router-dom";
 import NavBar from "./components/NavBar";
 import ViewBox from "./components/ViewBox";
@@ -16,13 +16,15 @@ import icons from "./assets/icons/index.js";
 function App() {
   const [activeTheme, setActiveTheme] = useState(snow);
   const [dropdown, setDropdown] = useState(false);
+  const [nextTheme, setNextTheme] = useState(null);
+  const dropdownRef = useRef(null);
 
   const getThemeName = (theme) => {
     if (theme === snow) return "snow";
     if (theme === summer) return "summer";
     if (theme === spring) return "spring";
     if (theme === fall) return "fall";
-    // Default case
+
     return "unknown";
   };
 
@@ -30,12 +32,68 @@ function App() {
     if (activeTheme === snow) {
       return { transform: "scaleY(-1)" };
     } else if (activeTheme === summer) {
-      return { transform: "scaleX(-1)" };
+      return { transform: "scaleY(1)" };
     } else if (activeTheme === spring) {
-      return { transform: "scaleX(1)" };
+      return { transform: "scaleY(1)" };
     } else if (activeTheme === fall) {
-      return { transform: "scaleX(-1)" };
+      return { transform: "scaleY(1)" };
     }
+  };
+
+  const themeFixer2 = () => {
+    let textStyle = {},
+      borderStyle = {};
+    let decoColor = {};
+
+    if (activeTheme === snow) {
+      textStyle.color = "#009bef";
+      borderStyle = { border: "2px solid #009bef" };
+      decoColor = { textDecorationColor: "#19a2eb" };
+    } else if (activeTheme === summer) {
+      textStyle.color = "#F4653E";
+      borderStyle = { border: "2px solid #F4653E" };
+      decoColor = { textDecorationColor: "#F4653E" };
+    } else if (activeTheme === fall) {
+      textStyle.color = "#CA0000";
+      borderStyle = { border: "2px solid #CA0000" };
+      decoColor = { textDecorationColor: "#CA0000" };
+    } else if (activeTheme === spring) {
+      textStyle.color = "#E5B700";
+      borderStyle = { border: "2px solid #E5B700" };
+      decoColor = { textDecorationColor: "#E5B700" };
+    }
+
+    return { textStyle, borderStyle, decoColor };
+  };
+
+  const { textStyle, borderStyle, decoColor } = themeFixer2();
+
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setDropdown(false);
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [dropdownRef]);
+
+  useEffect(() => {
+    if (nextTheme !== null) {
+      const transitionTimeout = setTimeout(() => {
+        setActiveTheme(nextTheme);
+        setNextTheme(null);
+      }, 500); // Adjust the duration of the transition (in milliseconds)
+
+      return () => clearTimeout(transitionTimeout);
+    }
+  }, [nextTheme]);
+
+  const handleThemeChange = (theme) => {
+    setNextTheme(theme);
   };
 
   return (
@@ -44,13 +102,23 @@ function App() {
         <img
           draggable="false"
           style={themeFixer()}
-          className="no"
+          className="background-image"
           src={activeTheme}
         />
+        {nextTheme && (
+          <img
+            draggable="false"
+            className="background-image next"
+            src={nextTheme}
+            alt="Next Background"
+          />
+        )}
       </div>
       <div
         onClick={() => setDropdown(!dropdown)}
         className={`theme ${dropdown ? "open" : ""}`}
+        style={borderStyle}
+        ref={dropdownRef}
       >
         {dropdown ? (
           <>
@@ -58,6 +126,11 @@ function App() {
               onClick={() => {
                 setActiveTheme(snow);
                 setDropdown(false);
+                handleThemeChange(snow);
+              }}
+              style={{
+                ...decoColor,
+                color: activeTheme === snow ? textStyle.color : undefined,
               }}
             >
               Winter
@@ -66,6 +139,11 @@ function App() {
               onClick={() => {
                 setActiveTheme(summer);
                 setDropdown(false);
+                handleThemeChange(summer);
+              }}
+              style={{
+                ...decoColor,
+                color: activeTheme === summer ? textStyle.color : undefined,
               }}
             >
               Summer
@@ -74,6 +152,11 @@ function App() {
               onClick={() => {
                 setActiveTheme(fall);
                 setDropdown(false);
+                handleThemeChange(fall);
+              }}
+              style={{
+                ...decoColor,
+                color: activeTheme === fall ? textStyle.color : undefined,
               }}
             >
               Fall
@@ -82,6 +165,11 @@ function App() {
               onClick={() => {
                 setActiveTheme(spring);
                 setDropdown(false);
+                handleThemeChange(spring);
+              }}
+              style={{
+                ...decoColor,
+                color: activeTheme === spring ? textStyle.color : undefined,
               }}
             >
               Spring

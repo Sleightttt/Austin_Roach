@@ -26,8 +26,8 @@ const NavBar = ({ activeTheme }) => {
       textStyle.color = "#CA0000";
       borderBottomStyle = { borderBottom: "2px solid #CA0000" };
     } else if (activeTheme === "spring" || activeTheme === "fall") {
-      textStyle.color = "#C9A100";
-      borderBottomStyle = { borderBottom: "2px solid #C9A100" };
+      textStyle.color = "#E5B700";
+      borderBottomStyle = { borderBottom: "2px solid #E5B700" };
     }
 
     return { textStyle, borderBottomStyle };

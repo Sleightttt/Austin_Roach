@@ -29,7 +29,7 @@ const AboutNav = ({ activeTheme }) => {
       }, 1000); // Adjust this timeout to match the sliding animation duration
     }
 
-    return () => clearInterval(intervalId); // Clean up the interval
+    return () => clearInterval(intervalId);
   }, [initialLoad]);
 
   const themeFixer = () => {
@@ -42,10 +42,10 @@ const AboutNav = ({ activeTheme }) => {
       boxStyle = { background: "linear-gradient(125deg, #FFAADA, #F4653E)" };
       textStyle.color = "#F4653E";
     } else if (activeTheme === "spring") {
-      boxStyle = { background: "linear-gradient(125deg, #C9A100, #F4653E)" };
-      textStyle.color = "#C9A100";
+      boxStyle = { background: "linear-gradient(125deg, #E5B700, #F4653E)" };
+      textStyle.color = "#E5B700";
     } else if (activeTheme === "fall") {
-      boxStyle = { background: "linear-gradient(125deg, #CA0000, #F4653E)" };
+      boxStyle = { background: "linear-gradient(125deg, #CA0000, #FF8235)" };
       textStyle.color = "#F4653E";
     }
     return { textStyle, boxStyle };

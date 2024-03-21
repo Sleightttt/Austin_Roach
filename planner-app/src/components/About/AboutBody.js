@@ -9,7 +9,7 @@ const AboutBody = ({ activeTheme }) => {
     } else if (activeTheme === "summer") {
       return "#F4653E";
     } else if (activeTheme === "spring") {
-      return "#C9A100";
+      return "#E5B700";
     } else if (activeTheme === "fall") {
       return "#CA0000";
     }
