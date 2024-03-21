@@ -137,6 +137,19 @@ function App() {
             </div>
             <div
               onClick={() => {
+                setActiveTheme(spring);
+                setDropdown(false);
+                handleThemeChange(spring);
+              }}
+              style={{
+                ...decoColor,
+                color: activeTheme === spring ? textStyle.color : undefined,
+              }}
+            >
+              Spring
+            </div>
+            <div
+              onClick={() => {
                 setActiveTheme(summer);
                 setDropdown(false);
                 handleThemeChange(summer);
@@ -160,19 +173,6 @@ function App() {
               }}
             >
               Fall
-            </div>
-            <div
-              onClick={() => {
-                setActiveTheme(spring);
-                setDropdown(false);
-                handleThemeChange(spring);
-              }}
-              style={{
-                ...decoColor,
-                color: activeTheme === spring ? textStyle.color : undefined,
-              }}
-            >
-              Spring
             </div>
           </>
         ) : (
