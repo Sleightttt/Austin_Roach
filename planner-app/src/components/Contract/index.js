@@ -2,8 +2,35 @@ import React from "react";
 import "./Contract.css";
 import { useState } from "react";
 
-const Contract = () => {
+const Contract = ({ activeTheme }) => {
   const [activeEntry, setActiveEntry] = useState("life");
+  const theme = activeTheme;
+
+  const themeFixer = () => {
+    let boxStyle = {};
+    let textStyle = {};
+    let borderLeft = {};
+    if (activeTheme === "snow") {
+      textStyle.color = "#009bef";
+      borderLeft.borderLeft = "8px solid rgb(0, 187, 255)";
+      boxStyle = { background: "linear-gradient(125deg, #19a2eb, #13618c)" };
+    } else if (activeTheme === "summer") {
+      boxStyle = { background: "linear-gradient(125deg, #FFAADA, #F4653E)" };
+      textStyle.color = "#F4653E";
+      borderLeft.borderLeft = "8px solid #F4653E";
+    } else if (activeTheme === "spring") {
+      boxStyle = { background: "linear-gradient(125deg, #E5B700, #F4653E)" };
+      textStyle.color = "#E5B700";
+      borderLeft.borderLeft = "8px solid #F4653E";
+    } else if (activeTheme === "fall") {
+      boxStyle = { background: "linear-gradient(125deg, #CA0000, #FF8235)" };
+      textStyle.color = "#CA0000";
+      borderLeft.borderLeft = "8px solid #CA0000";
+    }
+    return { textStyle, boxStyle, borderLeft };
+  };
+
+  const { textStyle, boxStyle, borderLeft } = themeFixer();
 
   const entryContent = {
     life: {
@@ -33,6 +60,7 @@ const Contract = () => {
           className={`entry-box-c ${
             activeEntry === "life" ? "active-entry" : ""
           }`}
+          style={{ ...boxStyle, ...(activeEntry === "life" ? borderLeft : {}) }}
           onClick={() => setActiveEntry("life")}
         >
           Lifescience Media
@@ -41,13 +69,16 @@ const Contract = () => {
           className={`entry-box-c ${
             activeEntry === "big" ? "active-entry" : ""
           }`}
+          style={{ ...boxStyle, ...(activeEntry === "big" ? borderLeft : {}) }}
           onClick={() => setActiveEntry("big")}
         >
           Big Deal Digital
         </div>
       </div>
       <div className="contract-body">
-        <div className="body-title">{entryContent[activeEntry].title}</div>
+        <div className="body-title" style={{ ...textStyle }}>
+          {entryContent[activeEntry].title}
+        </div>
         <div className="body-p">{entryContent[activeEntry].about1}</div>
 
         <div className="body-p">{entryContent[activeEntry].about2}</div>

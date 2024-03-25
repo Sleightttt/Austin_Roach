@@ -30,18 +30,6 @@ function App() {
     return "unknown";
   };
 
-  const themeFixer = () => {
-    if (activeTheme === snow) {
-      return { transform: "scaleY(-1)" };
-    } else if (activeTheme === summer) {
-      return { transform: "scaleY(1)" };
-    } else if (activeTheme === spring) {
-      return { transform: "scaleY(1)" };
-    } else if (activeTheme === fall) {
-      return { transform: "scaleY(1)" };
-    }
-  };
-
   const themeFixer2 = () => {
     let textStyle = {},
       borderStyle = {};
@@ -112,6 +100,7 @@ function App() {
           draggable="false"
           className={`background-image ${transitioningOut ? "fade-in" : ""}`}
           src={activeTheme}
+          alt="theme background"
         />
         {nextTheme && (
           <img
@@ -186,7 +175,7 @@ function App() {
             </div>
           </>
         ) : (
-          <img className="theme-icon" src={icons.menu} />
+          <img alt="theme icon" className="theme-icon" src={icons.menu} />
         )}
       </div>
       <NavBar activeTheme={getThemeName(activeTheme)} />
@@ -196,9 +185,18 @@ function App() {
             path="/"
             element={<About activeTheme={getThemeName(activeTheme)} />}
           />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/contract" element={<Contract />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route
+            path="/projects"
+            element={<Projects activeTheme={getThemeName(activeTheme)} />}
+          />
+          <Route
+            path="/contract"
+            element={<Contract activeTheme={getThemeName(activeTheme)} />}
+          />
+          <Route
+            path="/contact"
+            element={<Contact activeTheme={getThemeName(activeTheme)} />}
+          />
         </Routes>
       </ViewBox>
     </div>

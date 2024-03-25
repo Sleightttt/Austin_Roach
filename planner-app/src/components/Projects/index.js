@@ -17,7 +17,7 @@ import pos3 from "../../assets/images/pos3.jpg";
 import pos4 from "../../assets/images/pos4.jpg";
 import pos5 from "../../assets/images/pos5.jpg";
 
-const Projects = () => {
+const Projects = ({ activeTheme }) => {
   const [activeEntry, setActiveEntry] = useState("image");
   const handleEntryClick = (entry) => {
     setActiveEntry(entry);
@@ -70,6 +70,32 @@ const Projects = () => {
     },
   };
 
+  const themeFixer = () => {
+    let boxStyle = {};
+    let textStyle = {};
+    let borderLeft = {};
+    if (activeTheme === "snow") {
+      textStyle.color = "#009bef";
+      borderLeft.borderLeft = "8px solid rgb(0, 187, 255)";
+      boxStyle = { background: "linear-gradient(125deg, #19a2eb, #13618c)" };
+    } else if (activeTheme === "summer") {
+      boxStyle = { background: "linear-gradient(125deg, #FFAADA, #F4653E)" };
+      textStyle.color = "#F4653E";
+      borderLeft.borderLeft = "8px solid #F4653E";
+    } else if (activeTheme === "spring") {
+      boxStyle = { background: "linear-gradient(125deg, #E5B700, #F4653E)" };
+      textStyle.color = "#E5B700";
+      borderLeft.borderLeft = "8px solid #E5B700";
+    } else if (activeTheme === "fall") {
+      boxStyle = { background: "linear-gradient(125deg, #CA0000, #FF8235)" };
+      textStyle.color = "#CA0000";
+      borderLeft.borderLeft = "8px solid #CA0000";
+    }
+    return { textStyle, boxStyle, borderLeft };
+  };
+
+  const { textStyle, boxStyle, borderLeft } = themeFixer();
+
   const handleLeftArrowClick = () => {
     setCurrentImageIndex((prevIndex) =>
       prevIndex === 0
@@ -94,6 +120,7 @@ const Projects = () => {
             activeEntry === "image" ? "active-entry" : ""
           }`}
           onClick={() => handleEntryClick("image")}
+          style={{ ...(activeEntry === "image" ? borderLeft : {}) }}
         >
           <div className="nav-text">
             <span style={{ color: "#06cbfc" }}>Image</span>
@@ -105,6 +132,7 @@ const Projects = () => {
             activeEntry === "proof" ? "active-entry" : ""
           }`}
           onClick={() => handleEntryClick("proof")}
+          style={{ ...(activeEntry === "proof" ? borderLeft : {}) }}
         >
           <div className="nav-text">
             <span style={{ color: "#e867ff" }}>proofofshred</span>
@@ -114,6 +142,7 @@ const Projects = () => {
           className={`entry-box entry-box-job ${
             activeEntry === "job" ? "active-entry" : ""
           }`}
+          style={{ ...(activeEntry === "job" ? borderLeft : {}) }}
           onClick={() => handleEntryClick("job")}
         >
           <div className="nav-text">
@@ -161,6 +190,7 @@ const Projects = () => {
               href={entryContent[activeEntry].githubLink}
               target="_blank"
               className="link"
+              style={{ ...textStyle }}
             >
               Github Link
               <img alt="git logo" className="git-live-logo" src={icons.logo} />
@@ -169,6 +199,7 @@ const Projects = () => {
           {entryContent[activeEntry].liveLink ? (
             <div className="git-live-entry">
               <a
+                style={{ ...textStyle }}
                 href={entryContent[activeEntry].liveLink}
                 target="_blank"
                 className="link"
