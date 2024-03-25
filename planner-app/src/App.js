@@ -18,6 +18,8 @@ function App() {
   const [dropdown, setDropdown] = useState(false);
   const [nextTheme, setNextTheme] = useState(null);
   const dropdownRef = useRef(null);
+  const [transitioningOut, setTransitioningOut] = useState(false);
+  const [transitioningIn, setTransitioningIn] = useState(false);
 
   const getThemeName = (theme) => {
     if (theme === snow) return "snow";
@@ -83,12 +85,19 @@ function App() {
 
   useEffect(() => {
     if (nextTheme !== null) {
-      const transitionTimeout = setTimeout(() => {
-        setActiveTheme(nextTheme);
-        setNextTheme(null);
-      }, 500); // Adjust the duration of the transition (in milliseconds)
-
-      return () => clearTimeout(transitionTimeout);
+      setTransitioningOut(true); // Start fade-out transition
+      setActiveTheme(nextTheme);
+      const timeout = setTimeout(() => {
+        // Switch to the next theme
+        setTransitioningOut(false); // End fade-out transition
+        setTransitioningIn(true); // Start fade-in transition
+        const timeout2 = setTimeout(() => {
+          setNextTheme(null); // Reset next theme
+          setTransitioningIn(false); // End fade-in transition
+        }, 500); // Adjust as needed to match transition duration
+        return () => clearTimeout(timeout2);
+      }, 500); // Adjust as needed to match transition duration
+      return () => clearTimeout(timeout);
     }
   }, [nextTheme]);
 
@@ -101,14 +110,15 @@ function App() {
       <div className="video-background2">
         <img
           draggable="false"
-          style={themeFixer()}
-          className="background-image"
+          className={`background-image ${transitioningOut ? "fade-in" : ""}`}
           src={activeTheme}
         />
         {nextTheme && (
           <img
             draggable="false"
-            className="background-image next"
+            className={`background-image next ${
+              transitioningIn ? "fade-out" : ""
+            }`}
             src={nextTheme}
             alt="Next Background"
           />
