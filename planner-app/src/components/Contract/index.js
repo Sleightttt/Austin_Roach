@@ -4,7 +4,6 @@ import { useState } from "react";
 
 const Contract = ({ activeTheme }) => {
   const [activeEntry, setActiveEntry] = useState("life");
-  const theme = activeTheme;
 
   const themeFixer = () => {
     let boxStyle = {};
@@ -25,7 +24,7 @@ const Contract = ({ activeTheme }) => {
     } else if (activeTheme === "fall") {
       boxStyle = { background: "linear-gradient(125deg, #CA0000, #FF8235)" };
       textStyle.color = "#CA0000";
-      borderLeft.borderLeft = "8px solid #CA0000";
+      borderLeft.borderLeft = "8px solid #FF8235";
     }
     return { textStyle, boxStyle, borderLeft };
   };
@@ -53,6 +52,10 @@ const Contract = ({ activeTheme }) => {
     },
   };
 
+  const handleClick = (entryKey) => {
+    setActiveEntry(entryKey);
+  };
+
   return (
     <div className="contract-cont">
       <div className="contract-nav">
@@ -61,7 +64,7 @@ const Contract = ({ activeTheme }) => {
             activeEntry === "life" ? "active-entry" : ""
           }`}
           style={{ ...boxStyle, ...(activeEntry === "life" ? borderLeft : {}) }}
-          onClick={() => setActiveEntry("life")}
+          onClick={() => handleClick("life")}
         >
           Lifescience Media
         </div>
@@ -70,20 +73,19 @@ const Contract = ({ activeTheme }) => {
             activeEntry === "big" ? "active-entry" : ""
           }`}
           style={{ ...boxStyle, ...(activeEntry === "big" ? borderLeft : {}) }}
-          onClick={() => setActiveEntry("big")}
+          onClick={() => handleClick("big")}
         >
           Big Deal Digital
         </div>
       </div>
-      <div className="contract-body">
+      <div className="contract-body fade-in">
         <div className="body-title" style={{ ...textStyle }}>
-          {entryContent[activeEntry].title}
+          {entryContent[activeEntry]?.title}
         </div>
-        <div className="body-p">{entryContent[activeEntry].about1}</div>
-
-        <div className="body-p">{entryContent[activeEntry].about2}</div>
-
-        <div className="body-p">{entryContent[activeEntry].about3}</div>
+        {/* Apply the fade-in class conditionally based on active entry */}
+        <div className={`body-p`}>{entryContent[activeEntry]?.about1}</div>
+        <div className={`body-p`}>{entryContent[activeEntry]?.about2}</div>
+        <div className={`body-p`}>{entryContent[activeEntry]?.about3}</div>
       </div>
     </div>
   );

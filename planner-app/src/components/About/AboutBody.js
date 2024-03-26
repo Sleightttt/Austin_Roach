@@ -16,7 +16,7 @@ const AboutBody = ({ activeTheme }) => {
   };
 
   return (
-    <div className="about-body">
+    <div className="about-body fade-in">
       <div className="about-p">
         <span style={{ fontWeight: "bold", color: themeFixer() }}>
           Thank you

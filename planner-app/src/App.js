@@ -75,16 +75,18 @@ function App() {
     if (nextTheme !== null) {
       setTransitioningOut(true); // Start fade-out transition
       setActiveTheme(nextTheme);
+
       const timeout = setTimeout(() => {
         // Switch to the next theme
         setTransitioningOut(false); // End fade-out transition
         setTransitioningIn(true); // Start fade-in transition
+
         const timeout2 = setTimeout(() => {
-          setNextTheme(null); // Reset next theme
-          setTransitioningIn(false); // End fade-in transition
-        }, 500); // Adjust as needed to match transition duration
+          setTransitioningIn(false);
+          // End fade-in transition
+        }, 1000); // Adjust as needed to match transition duration
         return () => clearTimeout(timeout2);
-      }, 500); // Adjust as needed to match transition duration
+      }, 1000); // Adjust as needed to match transition duration
       return () => clearTimeout(timeout);
     }
   }, [nextTheme]);

@@ -92,12 +92,12 @@
   animation: slideRight 0.5s ease forwards;
 }
 
-.fade-in {
+.fade-in2 {
   opacity: 1;
   transition: opacity 0.5s ease;
 }
 
-.fade-out {
+.fade-out2 {
   opacity: 0;
   transition: opacity 0.5s ease;
 }

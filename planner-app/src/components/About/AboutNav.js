@@ -55,12 +55,12 @@ const AboutNav = ({ activeTheme }) => {
 
   return (
     <div className="aboutnav-cont">
-      <div className={`name-h slide-left ${fadeIn ? "fade-in" : "fade-out"}`}>
+      <div className={`name-h slide-left ${fadeIn ? "fade-in2" : "fade-out2"}`}>
         Brennan Cota
       </div>
       <div
         className={`name-h2 ${initialLoad ? "slide-right" : ""} ${
-          fadeIn ? "fade-in" : "fade-out"
+          fadeIn ? "fade-in2" : "fade-out2"
         }`}
         style={{ ...textStyle }}
       >

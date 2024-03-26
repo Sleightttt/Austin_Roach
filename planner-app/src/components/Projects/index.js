@@ -150,7 +150,7 @@ const Projects = ({ activeTheme }) => {
           </div>
         </div>
       </div>
-      <div className="about-box">
+      <div className="about-box fade-in">
         <div className="image-cont">
           <img
             alt="left-arrow"
