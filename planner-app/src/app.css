@@ -76,6 +76,10 @@ html {
   animation: fadeIn 1s ease forwards;
 }
 
+.next {
+  opacity: 0;
+}
+
 @keyframes fadeOut {
   0% {
     opacity: 1;

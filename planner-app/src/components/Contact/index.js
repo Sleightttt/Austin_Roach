@@ -37,16 +37,10 @@ const Contact = ({ activeTheme }) => {
       bgStyle = {
         background: "linear-gradient(125deg, #FFAADA, #F4653E)",
       };
-      // textStyle.color = "#F4653E";
-      // borderLeft.borderLeft = "8px solid #F4653E";
     } else if (activeTheme === "spring") {
       bgStyle = { background: "linear-gradient(125deg, #E5B700, #F4653E)" };
-      // textStyle.color = "#E5B700";
-      // borderLeft.borderLeft = "8px solid #E5B700";
     } else if (activeTheme === "fall") {
       bgStyle = { background: "linear-gradient(125deg, #CA0000, #FF8235)" };
-      // textStyle.color = "#CA0000";
-      // borderLeft.borderLeft = "8px solid #CA0000";
     }
     return { bgStyle };
   };
