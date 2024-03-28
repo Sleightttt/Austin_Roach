@@ -82,7 +82,6 @@ const Contract = ({ activeTheme }) => {
         <div className="body-title" style={{ ...textStyle }}>
           {entryContent[activeEntry]?.title}
         </div>
-        {/* Apply the fade-in class conditionally based on active entry */}
         <div className={`body-p`}>{entryContent[activeEntry]?.about1}</div>
         <div className={`body-p`}>{entryContent[activeEntry]?.about2}</div>
         <div className={`body-p`}>{entryContent[activeEntry]?.about3}</div>
