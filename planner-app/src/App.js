@@ -72,6 +72,14 @@ function App() {
   }, [dropdownRef]);
 
   useEffect(() => {
+    const preloadImages = [snow, summer, spring, fall];
+    preloadImages.forEach((image) => {
+      const img = new Image();
+      img.src = image;
+    });
+  }, []);
+
+  useEffect(() => {
     if (nextTheme !== null) {
       setTransitioningOut(true); // Start fade-out transition
       setActiveTheme(nextTheme);
