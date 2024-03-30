@@ -45,8 +45,8 @@ const AboutNav = ({ activeTheme }) => {
       boxStyle = { background: "linear-gradient(125deg, #E5B700, #F4653E)" };
       textStyle.color = "#E5B700";
     } else if (activeTheme === "fall") {
-      boxStyle = { background: "linear-gradient(125deg, #CA0000, #FF8235)" };
-      textStyle.color = "#F4653E";
+      boxStyle = { background: "linear-gradient(125deg,  #FF8235, #CA0000)" };
+      textStyle.color = "#FF8235";
     }
     return { textStyle, boxStyle };
   };

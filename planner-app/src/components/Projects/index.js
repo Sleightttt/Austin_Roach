@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Projects.css";
 import imagespace from "../../assets/images/ImageSpace-demo-pic.png";
 import img1 from "../../assets/images/img1.png";
@@ -87,7 +87,7 @@ const Projects = ({ activeTheme }) => {
       textStyle.color = "#E5B700";
       borderLeft.borderLeft = "8px solid #E5B700";
     } else if (activeTheme === "fall") {
-      boxStyle = { background: "linear-gradient(125deg, #CA0000, #FF8235)" };
+      boxStyle = { background: "linear-gradient(125deg, #FF8235, #CA0000 )" };
       textStyle.color = "#CA0000";
       borderLeft.borderLeft = "8px solid #CA0000";
     }
@@ -111,6 +111,30 @@ const Projects = ({ activeTheme }) => {
         : prevIndex + 1
     );
   };
+
+  useEffect(() => {
+    const preloadImages = [
+      pos1,
+      pos2,
+      pos3,
+      pos4,
+      pos5,
+      imagespace,
+      img1,
+      img2,
+      img3,
+      img4,
+      img5,
+      img6,
+      job1,
+      job2,
+      job3,
+    ];
+    preloadImages.forEach((image) => {
+      const img = new Image();
+      img.src = image;
+    });
+  }, []);
 
   return (
     <div className="projects-cont">

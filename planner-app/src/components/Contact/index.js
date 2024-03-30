@@ -40,7 +40,7 @@ const Contact = ({ activeTheme }) => {
     } else if (activeTheme === "spring") {
       bgStyle = { background: "linear-gradient(125deg, #E5B700, #F4653E)" };
     } else if (activeTheme === "fall") {
-      bgStyle = { background: "linear-gradient(125deg, #CA0000, #FF8235)" };
+      bgStyle = { background: "linear-gradient(125deg,#FF8235, #CA0000 )" };
     }
     return { bgStyle };
   };
