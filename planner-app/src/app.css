@@ -26,12 +26,6 @@ html {
   z-index: 0;
   overflow: hidden;
 }
-/*
-.video-background video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-} */
 
 .video-background2 {
   position: fixed;
@@ -80,6 +74,22 @@ html {
   opacity: 0;
 }
 
+.arrow {
+  position: absolute;
+  right: -40px; /* Initial position */
+  width: 20px;
+  height: 80%;
+  background: center/contain no-repeat; /* Replace 'arrow.png' with your arrow image */
+  animation: moveArrow 3s linear infinite; /* Adjust animation duration as needed */
+}
+@keyframes moveArrow {
+  0% {
+    right: 40px; /* Initial position */
+  }
+  100% {
+    right: 60px; /* Move to the right end of the dropdown */
+  }
+}
 @keyframes fadeOut {
   0% {
     opacity: 1;

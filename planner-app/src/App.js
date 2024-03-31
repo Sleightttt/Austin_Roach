@@ -185,7 +185,11 @@ function App() {
             </div>
           </>
         ) : (
-          <img alt="theme icon" className="theme-icon" src={icons.menu} />
+          <>
+            <img alt="theme icon" className="theme-icon" src={icons.menu} />
+
+            {/* <img alt="arrow" className="arrow" src={icons.rightArrow} /> */}
+          </>
         )}
       </div>
       <NavBar activeTheme={getThemeName(activeTheme)} />
