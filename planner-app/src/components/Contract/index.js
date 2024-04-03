@@ -61,7 +61,7 @@ const Contract = ({ activeTheme }) => {
       <div className="contract-nav">
         <div
           className={`entry-box-c ${
-            activeEntry === "life" ? "active-entry" : ""
+            activeEntry === "life" ? "active-entry2" : ""
           }`}
           style={{ ...boxStyle, ...(activeEntry === "life" ? borderLeft : {}) }}
           onClick={() => handleClick("life")}
@@ -70,7 +70,7 @@ const Contract = ({ activeTheme }) => {
         </div>
         <div
           className={`entry-box-c ${
-            activeEntry === "big" ? "active-entry" : ""
+            activeEntry === "big" ? "active-entry2" : ""
           }`}
           style={{ ...boxStyle, ...(activeEntry === "big" ? borderLeft : {}) }}
           onClick={() => handleClick("big")}

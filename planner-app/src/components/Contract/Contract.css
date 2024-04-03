@@ -98,6 +98,10 @@
   .entry-box-c {
     height: 30px;
   }
+
+  .active-entry2 {
+    border-bottom: none;
+  }
 }
 
 @media screen and (max-width: 1320px) {

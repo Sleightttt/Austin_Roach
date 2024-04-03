@@ -211,6 +211,11 @@
 
   .active-entry {
     border-left: none;
+    border-bottom: 0;
+  }
+
+  .active-entry2 {
+    border-left: none;
     border-bottom: 4px solid rgb(0, 187, 255);
   }
 
