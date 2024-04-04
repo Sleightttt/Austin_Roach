@@ -26,10 +26,7 @@ const Contact = ({ activeTheme }) => {
 
   const themeFixer = () => {
     let bgStyle = {};
-
     if (activeTheme === "snow") {
-      // textStyle.color = "#009bef";
-
       bgStyle = {
         background: "linear-gradient(125deg, #19a2eb, #13618c)",
       };
