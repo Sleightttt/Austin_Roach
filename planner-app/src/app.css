@@ -79,7 +79,7 @@ html {
   right: -40px; /* Initial position */
   width: 20px;
   height: 80%;
-  background: center/contain no-repeat; /* Replace 'arrow.png' with your arrow image */
+  background: center/contain no-repeat;
   animation: moveArrow 3s linear infinite;
 }
 @keyframes moveArrow {
