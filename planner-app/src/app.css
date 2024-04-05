@@ -76,7 +76,7 @@ html {
 
 .arrow {
   position: absolute;
-  right: -40px; /* Initial position */
+  right: -40px;
   width: 20px;
   height: 80%;
   background: center/contain no-repeat;
@@ -84,10 +84,10 @@ html {
 }
 @keyframes moveArrow {
   0% {
-    right: 40px; /* Initial position */
+    right: 40px;
   }
   100% {
-    right: 60px; /* Move to the right end of the dropdown */
+    right: 60px;
   }
 }
 @keyframes fadeOut {
