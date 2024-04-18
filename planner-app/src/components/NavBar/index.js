@@ -4,13 +4,10 @@ import "./NavBar.css";
 import icons from "../../assets/icons";
 
 const NavBar = ({ activeTheme }) => {
-  let theme = activeTheme;
   const location = useLocation();
   const isActive = (path) => {
     return location.pathname === path ? "active" : "";
   };
-
-  // console.log(theme);
 
   const themeFixer = () => {
     let textStyle = {},
@@ -43,7 +40,7 @@ const NavBar = ({ activeTheme }) => {
           <div
             style={{
               ...textStyle,
-              ...(isActive("/") ? borderBottomStyle : {}), // Apply borderBottomStyle only if active
+              ...(isActive("/") ? borderBottomStyle : {}),
               transition: "0.2s",
             }}
             className={`logo-text ${isActive("/")}`}

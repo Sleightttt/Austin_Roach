@@ -2,23 +2,11 @@
   position: relative;
   display: flex;
   justify-content: center;
+
   height: 100px;
   margin: 5px;
+  width: 95vw;
   font-family: "Montserrat", sans-serif;
-}
-
-.logo-cont {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 10%;
-  font-size: 1rem;
-  transition: 0.3s;
-}
-
-.logo-cont:hover {
-  cursor: pointer;
-  transform: scale(1.05);
 }
 
 .logo-text {
@@ -26,7 +14,6 @@
   font-weight: 300;
   font-size: 1.2rem;
   border-bottom: #009bef00 2px solid;
-  /* animation: fadeIn 1s ease forwards; */
 }
 
 .logo-link {
@@ -60,6 +47,7 @@
   text-wrap: wrap;
   justify-content: space-around;
   height: 100%;
+  width: 100%;
   align-content: center;
   transition: 0.3s;
   text-decoration: none;
@@ -76,14 +64,8 @@
 }
 
 @media screen and (max-width: 876px) {
-  .logo-cont {
-    top: 4px;
-    font-size: 0.5rem;
-    height: 100%;
-  }
-
   .logo-text {
-    font-size: rem;
+    font-size: 1rem;
   }
 }
 
@@ -92,7 +74,7 @@
     height: 60px;
   }
   .nav-cont {
-    width: 100%;
+    width: 90vw;
   }
 
   .logo-text {
