@@ -71,13 +71,13 @@ function App() {
     };
   }, [dropdownRef]);
 
-  useEffect(() => {
-    const preloadImages = [snow, summer, spring, fall];
-    preloadImages.forEach((image) => {
-      const img = new Image();
-      img.src = image;
-    });
-  }, []);
+  // useEffect(() => {
+  //   const preloadImages = [snow, summer, spring, fall];
+  //   preloadImages.forEach((image) => {
+  //     const img = new Image();
+  //     img.src = image;
+  //   });
+  // }, []);
 
   useEffect(() => {
     if (nextTheme !== null) {
@@ -106,6 +106,10 @@ function App() {
   return (
     <div className="App">
       <div className="video-background2">
+        <img src={snow} style={{ opacity: 0 }} alt="" />
+        <img src={summer} style={{ opacity: 0 }} alt="" />
+        <img src={spring} style={{ opacity: 0 }} alt="" />
+        <img src={fall} style={{ opacity: 0 }} alt="" />
         <img
           draggable="false"
           className={`background-image ${transitioningOut ? "fade-in" : ""}`}
