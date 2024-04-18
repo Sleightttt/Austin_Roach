@@ -36,7 +36,7 @@ const AboutNav = ({ activeTheme }) => {
     let boxStyle = {};
     let textStyle = {};
     if (activeTheme === "snow") {
-      textStyle.color = "#009bef";
+      textStyle.color = "#67caff";
       boxStyle = { background: "linear-gradient(125deg, #19a2eb, #13618c)" };
     } else if (activeTheme === "summer") {
       boxStyle = { background: "linear-gradient(125deg, #FFAADA, #F4653E)" };
