@@ -40,13 +40,13 @@ const AboutNav = ({ activeTheme }) => {
       boxStyle = { background: "linear-gradient(125deg, #19a2eb, #13618c)" };
     } else if (activeTheme === "summer") {
       boxStyle = { background: "linear-gradient(125deg, #FFAADA, #F4653E)" };
-      textStyle.color = "#F4653E";
+      textStyle.color = "#ffb39f";
     } else if (activeTheme === "spring") {
       boxStyle = { background: "linear-gradient(125deg, #E5B700, #F4653E)" };
-      textStyle.color = "#E5B700";
+      textStyle.color = "#fcdf1d";
     } else if (activeTheme === "fall") {
       boxStyle = { background: "linear-gradient(125deg,  #FF8235, #CA0000)" };
-      textStyle.color = "#FF8235";
+      textStyle.color = "#fe8c46";
     }
     return { textStyle, boxStyle };
   };
