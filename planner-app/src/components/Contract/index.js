@@ -11,20 +11,20 @@ const Contract = ({ activeTheme }) => {
     let borderLeft = {};
     if (activeTheme === "snow") {
       textStyle.color = "#009bef";
-      borderLeft.borderLeft = "8px solid rgb(0, 187, 255)";
+      borderLeft.border = "4px solid rgb(0, 187, 255)";
       boxStyle = { background: "linear-gradient(125deg, #19a2eb, #13618c)" };
     } else if (activeTheme === "summer") {
       boxStyle = { background: "linear-gradient(125deg, #FFAADA, #F4653E)" };
       textStyle.color = "#F4653E";
-      borderLeft.borderLeft = "8px solid #F4653E";
+      borderLeft.border = "4px solid #F4653E";
     } else if (activeTheme === "spring") {
       boxStyle = { background: "linear-gradient(125deg, #E5B700, #F4653E)" };
       textStyle.color = "#E5B700";
-      borderLeft.borderLeft = "8px solid #F4653E";
+      borderLeft.border = "4px solid #F4653E";
     } else if (activeTheme === "fall") {
       boxStyle = { background: "linear-gradient(125deg, #CA0000, #FF8235)" };
       textStyle.color = "#CA0000";
-      borderLeft.borderLeft = "8px solid #FF8235";
+      borderLeft.border = "4px solid #FF8235";
     }
     return { textStyle, boxStyle, borderLeft };
   };

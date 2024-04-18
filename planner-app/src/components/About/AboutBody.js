@@ -1,8 +1,6 @@
 import icons from "../../assets/icons";
 
 const AboutBody = ({ activeTheme }) => {
-  console.log(activeTheme, "----");
-
   const themeFixer = () => {
     if (activeTheme === "snow") {
       return "#009bef";

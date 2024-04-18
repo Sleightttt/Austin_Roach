@@ -76,25 +76,25 @@ const Projects = ({ activeTheme }) => {
     let borderLeft = {};
     if (activeTheme === "snow") {
       textStyle.color = "#009bef";
-      borderLeft.borderLeft = "8px solid rgb(0, 187, 255)";
+      borderLeft.border = "4px solid rgb(0, 187, 255)";
       boxStyle = { background: "linear-gradient(125deg, #19a2eb, #13618c)" };
     } else if (activeTheme === "summer") {
       boxStyle = { background: "linear-gradient(125deg, #FFAADA, #F4653E)" };
       textStyle.color = "#F4653E";
-      borderLeft.borderLeft = "8px solid #F4653E";
+      borderLeft.border = "4px solid #F4653E";
     } else if (activeTheme === "spring") {
       boxStyle = { background: "linear-gradient(125deg, #E5B700, #F4653E)" };
       textStyle.color = "#E5B700";
-      borderLeft.borderLeft = "8px solid #E5B700";
+      borderLeft.border = "4px solid #E5B700";
     } else if (activeTheme === "fall") {
       boxStyle = { background: "linear-gradient(125deg, #FF8235, #CA0000 )" };
       textStyle.color = "#CA0000";
-      borderLeft.borderLeft = "8px solid #CA0000";
+      borderLeft.border = "4px solid #CA0000";
     }
     return { textStyle, boxStyle, borderLeft };
   };
 
-  const { textStyle, boxStyle, borderLeft } = themeFixer();
+  const { textStyle, borderLeft } = themeFixer();
 
   const handleLeftArrowClick = () => {
     setCurrentImageIndex((prevIndex) =>
@@ -170,7 +170,7 @@ const Projects = ({ activeTheme }) => {
           onClick={() => handleEntryClick("job")}
         >
           <div className="nav-text">
-            <span style={{ color: "#90eafe" }}>Jobseeker</span>
+            <span style={{ color: "#00d0ff" }}>Jobseeker</span>
           </div>
         </div>
       </div>
@@ -213,6 +213,7 @@ const Projects = ({ activeTheme }) => {
             <a
               href={entryContent[activeEntry].githubLink}
               target="_blank"
+              rel="noreferrer"
               className="link"
               style={{ ...textStyle }}
             >
@@ -223,6 +224,7 @@ const Projects = ({ activeTheme }) => {
           {entryContent[activeEntry].liveLink ? (
             <div className="git-live-entry">
               <a
+                rel="noreferrer"
                 style={{ ...textStyle }}
                 href={entryContent[activeEntry].liveLink}
                 target="_blank"
