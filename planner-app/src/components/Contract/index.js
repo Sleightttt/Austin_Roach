@@ -35,7 +35,7 @@ const Contract = ({ activeTheme }) => {
     life: {
       title: "Lifescience Media",
       about1:
-        "I have been employed by Lifescience Media for many contract's as of date including building mobile applications from the ground up using various technologies such as React Native and Expo GO, interactive maps used as trade shows and conventions using basic HTML and CSS, and interactive games using Unity. The projects themselves are under NDA and this as much information as I can provide on the projects.",
+        "I have been employed by Lifescience Media for many contract's as of date including building mobile applications from the ground up using various technologies such as React Native and Expo GO, interactive maps used as trade shows and conventions using basic HTML and CSS, and interactive games using Unity. The projects themselves are under NDA and this as much information as I can provide on the projects themselves.",
       about2:
         "My time with the company has allowed me to grow exponentiallly as a developer. Cross-functional teams have allowed me to work with other developers, designers, and project managers to create a product that is not only functional but also visually appealing. I have also been able to work with clients to understand their needs and create a product that meets their expectations.",
       about3:
@@ -79,6 +79,7 @@ const Contract = ({ activeTheme }) => {
         </div>
       </div>
       <div className="contract-body fade-in">
+        <div></div>
         <div className="body-title" style={{ ...textStyle }}>
           {entryContent[activeEntry]?.title}
         </div>

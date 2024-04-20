@@ -179,6 +179,7 @@
 
 @media (max-width: 830px) {
   .about-body {
+    margin-top: 20px;
     font-size: 0.8rem;
   }
 }
@@ -198,5 +199,15 @@
   }
   .about-icon {
     height: 90px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .about-p {
+    font-size: 0.7rem;
+  }
+
+  .about-body {
+    margin-top: 20px;
   }
 }
