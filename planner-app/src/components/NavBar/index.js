@@ -22,7 +22,7 @@ const NavBar = ({ activeTheme }) => {
     } else if (activeTheme === "fall") {
       textStyle.color = "#CA0000";
       borderBottomStyle = { borderBottom: "2px solid #CA0000" };
-    } else if (activeTheme === "spring" || activeTheme === "fall") {
+    } else if (activeTheme === "spring") {
       textStyle.color = "#E5B700";
       borderBottomStyle = { borderBottom: "2px solid #E5B700" };
     }
