@@ -15,6 +15,11 @@ const AboutBody = ({ activeTheme }) => {
 
   return (
     <div className="about-body fade-in">
+      <div className="about-h-box">
+        <div style={{ color: themeFixer() }} className="about-h">
+          Welcome to my portfolio
+        </div>
+      </div>
       <div className="about-p">
         <span style={{ fontWeight: "bold", color: themeFixer() }}>
           Thank you
@@ -38,7 +43,11 @@ const AboutBody = ({ activeTheme }) => {
         optimal problem-solver as a programmer. Since graduating I've worked two
         contract roles, one developing an Agile Chatbot for Scrummasters and
         another developing solutions for a medical marketing company. I am
-        looking for a full-time opportunity to keep this flame going!
+        looking for a full-time opportunity to keep this flame going! Try the{" "}
+        <span style={{ fontWeight: "bold", color: themeFixer() }}>
+          theme switcher
+        </span>{" "}
+        at the bottom of the page!
       </div>
 
       <div className="about-p">

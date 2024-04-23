@@ -82,6 +82,7 @@ html {
   background: center/contain no-repeat;
   animation: moveArrow 3s linear infinite;
 }
+
 @keyframes moveArrow {
   0% {
     right: 40px;
@@ -123,6 +124,7 @@ html {
   border: solid 1px #19a2eb;
   z-index: 2;
   font-family: "Montserrat", sans-serif;
+  transition: 0.1s ease;
 }
 
 .theme:hover,
@@ -131,8 +133,8 @@ html {
 }
 
 .theme-icon {
-  height: 50%;
-  width: 50%;
+  height: 30px;
+  width: 30px;
   object-fit: cover;
   object-position: center;
   border-radius: 12px;
