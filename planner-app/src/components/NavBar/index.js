@@ -53,7 +53,7 @@ const NavBar = ({ activeTheme }) => {
           <div
             style={{
               ...textStyle,
-              ...(isActive("/projects") ? borderBottomStyle : {}), // Apply borderBottomStyle only if active
+              ...(isActive("/projects") ? borderBottomStyle : {}),
               transition: "0.2s",
             }}
             className={`logo-text ${isActive("/projects")}`}
@@ -61,17 +61,17 @@ const NavBar = ({ activeTheme }) => {
             Projects
           </div>
         </Link>
-        <Link to="/contract" className="icon-cont">
+        <Link to="/career" className="icon-cont">
           <img className="nav-icon" src={icons.contract} alt="Contract Work" />
           <div
             style={{
               ...textStyle,
-              ...(isActive("/contract") ? borderBottomStyle : {}), // Apply borderBottomStyle only if active
+              ...(isActive("/career") ? borderBottomStyle : {}), // Apply borderBottomStyle only if active
               transition: "0.2s",
             }}
             className={`logo-text ${isActive("/contract")}`}
           >
-            Contract
+            Career
           </div>
         </Link>
         <Link to="/contact" className="icon-cont">

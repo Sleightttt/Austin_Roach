@@ -11,8 +11,6 @@ import snow from "./assets/images/unsplash.jpg";
 import summer from "./assets/images/summer.jpg";
 import spring from "./assets/images/spring.jpg";
 import fall from "./assets/images/fall.jpg";
-import icons from "./assets/icons/index.js";
-import paint from "./assets/icons/paint-bucket.svg";
 
 function App() {
   const [activeTheme, setActiveTheme] = useState(snow);
@@ -229,7 +227,7 @@ function App() {
             element={<Projects activeTheme={getThemeName(activeTheme)} />}
           />
           <Route
-            path="/contract"
+            path="/career"
             element={<Contract activeTheme={getThemeName(activeTheme)} />}
           />
           <Route
