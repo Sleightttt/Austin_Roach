@@ -64,14 +64,13 @@
 .about-h-box {
   width: 100%;
   display: flex;
-
-  margin-top: -5px;
+  margin-top: 1.5%;
 }
 
 .about-h {
   font-family: "Tittilium Web", sans-serif;
   font-weight: 700;
-  font-size: 2.5rem;
+  font-size: 3rem;
   color: #009bef;
   text-shadow: 2px 2px 2px rgba(98, 98, 98, 0.207);
 }
@@ -220,9 +219,6 @@
   .about-icon {
     height: 80px;
   }
-  .about-h-box {
-    margin-top: -5px;
-  }
 }
 
 @media (min-width: 1650px) {
@@ -231,10 +227,6 @@
   }
   .about-icon {
     height: 90px;
-  }
-
-  .about-h {
-    font-size: 2.5rem;
   }
 }
 

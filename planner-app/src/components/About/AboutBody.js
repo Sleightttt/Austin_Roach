@@ -23,7 +23,7 @@ const AboutBody = ({ activeTheme }) => {
     <div className="about-body fade-in">
       <div className="about-h-box">
         <div style={{ color: themeFixer() }} className="about-h">
-          Welcome to my portfolio!
+          Welcome
         </div>
       </div>
       <div className="about-p">
