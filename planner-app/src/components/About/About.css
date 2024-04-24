@@ -58,6 +58,7 @@
   align-items: center;
   line-height: 1.3;
   border-radius: 12px;
+  height: 90%;
 }
 
 .about-h-box {
@@ -76,8 +77,8 @@
 }
 
 .about-p {
-  margin-top: 2%;
   line-height: 1.3;
+  margin: 3% 0;
 }
 
 .me {
@@ -89,15 +90,6 @@
   object-fit: cover;
   border: 1px solid black;
   box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.139);
-}
-
-.img-cont {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-
-  height: 300px;
-  width: 300px;
 }
 
 .slide-left {
@@ -120,7 +112,7 @@
 .about-icon-cont {
   display: flex;
   width: 100%;
-  margin-top: 5%;
+
   flex-direction: row;
   justify-content: space-around;
 }

@@ -74,27 +74,32 @@ const Projects = ({ activeTheme }) => {
     let boxStyle = {};
     let textStyle = {};
     let borderLeft = {};
+    let fill = {};
     if (activeTheme === "snow") {
       textStyle.color = "#009bef";
       borderLeft.border = "4px solid rgb(0, 187, 255)";
       boxStyle = { background: "linear-gradient(125deg, #19a2eb, #13618c)" };
+      fill.fill = "#009bef";
     } else if (activeTheme === "summer") {
       boxStyle = { background: "linear-gradient(125deg, #FFAADA, #F4653E)" };
       textStyle.color = "#F4653E";
       borderLeft.border = "4px solid #F4653E";
+      fill.fill = "#F4653E";
     } else if (activeTheme === "spring") {
       boxStyle = { background: "linear-gradient(125deg, #E5B700, #F4653E)" };
       textStyle.color = "#E5B700";
       borderLeft.border = "4px solid #E5B700";
+      fill.fill = "#E5B700";
     } else if (activeTheme === "fall") {
       boxStyle = { background: "linear-gradient(125deg, #FF8235, #CA0000 )" };
       textStyle.color = "#CA0000";
       borderLeft.border = "4px solid #CA0000";
+      fill.fill = "#CA0000";
     }
-    return { textStyle, boxStyle, borderLeft };
+    return { textStyle, boxStyle, borderLeft, fill };
   };
 
-  const { textStyle, borderLeft } = themeFixer();
+  const { textStyle, borderLeft, fill } = themeFixer();
 
   const handleLeftArrowClick = () => {
     setCurrentImageIndex((prevIndex) =>
@@ -198,13 +203,38 @@ const Projects = ({ activeTheme }) => {
         <div className="tracker">
           {entryContent[activeEntry].images.map((image, index) => (
             <div key={index} className="tracker-diamond-box">
-              <img
-                alt="tracker diamond"
-                className="tracker-diamond"
-                src={
-                  index === currentImageIndex ? icons.diamond2 : icons.diamond1
-                }
-              />
+              {index === currentImageIndex ? (
+                <svg
+                  className="tracker-diamond"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512 512"
+                  style={{ ...fill }}
+                >
+                  <g>
+                    <polygon
+                      class="st0"
+                      points="256,0 72.115,256 256,512 439.885,256 	"
+                    />
+                  </g>
+                </svg>
+              ) : (
+                <svg
+                  className="tracker-diamond"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512 512"
+                  style={{ ...fill }}
+                >
+                  <g>
+                    <path
+                      class="st0"
+                      d="M456.225,244.286L270.989,7.314C267.382,2.7,261.857,0,255.999,0c-5.856,0-11.381,2.7-14.989,7.314
+		L55.775,244.286c-5.378,6.884-5.378,16.544,0,23.428l185.236,236.972c3.608,4.616,9.132,7.314,14.989,7.314
+		c5.858,0,11.383-2.698,14.99-7.314l185.236-236.972C461.603,260.83,461.603,251.17,456.225,244.286z M255.999,477.522L82.84,256
+		L255.999,34.478L429.17,256L255.999,477.522z"
+                    />
+                  </g>
+                </svg>
+              )}
             </div>
           ))}
         </div>
