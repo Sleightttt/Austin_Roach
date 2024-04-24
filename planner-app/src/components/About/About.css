@@ -194,6 +194,17 @@
 @media (max-width: 830px) {
   .about-body {
     margin-top: 20px;
+    font-size: 0.9rem;
+  }
+
+  .about-h {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 605px) {
+  .about-body {
+    margin-top: 20px;
     font-size: 0.8rem;
   }
 
@@ -216,7 +227,7 @@
 
 @media (min-width: 1650px) {
   .about-body {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
   .about-icon {
     height: 90px;
