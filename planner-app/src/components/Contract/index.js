@@ -38,10 +38,9 @@ const Contract = ({ activeTheme }) => {
   const entryContent = {
     life: {
       title: "Lifescience Media",
-      about1:
-        "I have been employed by Lifescience Media for many contract's as of date including building mobile applications from the ground up using various technologies such as React Native and Expo GO, interactive maps used as trade shows and conventions using basic HTML and CSS, and interactive games using Unity. The projects themselves are under NDA.",
+      about1: `I have been employed by Lifescience Media for many contract's as of date including building mobile applications from the ground up using various technologies such as React Native and Expo GO, interactive maps used as trade shows and conventions using basic HTML and CSS, and interactive games using Unity. Most of these projects are under NDA, aside from my most recent endevour, the mobile companion application for the Teleflex Arrow EZ-IO Arrow.`,
       about2:
-        "My time with the company has allowed me to grow exponentiallly as a developer. Cross-functional teams have allowed me to work with other developers, designers, and project managers to create a product that is not only functional but also visually appealing. I have also been able to work with clients to understand their needs and create a product that meets their expectations.",
+        "My time with the company has allowed me to grow exponentiallly as a developer. Cross-functional teams have allowed me to work with other developers, designers, and project managers to create a product that is not only functional, but also visually appealing. I have also been able to work with clients to understand their needs and create a product that meets their expectations.",
       about3:
         "Utilizing the Agile methodology, I have been able to work in a fast-paced environment and have been able to adapt to changes in project scope and requirements. This has allowed me to work on multiple projects at once and has allowed me to keep challenging myself to become to best dev I can.",
     },
@@ -87,7 +86,12 @@ const Contract = ({ activeTheme }) => {
         <div className="body-title" style={{ ...textStyle }}>
           {entryContent[activeEntry]?.title}
         </div>
-        <div className={`body-p`}>{entryContent[activeEntry]?.about1}</div>
+        <div
+          className={`body-p`}
+          dangerouslySetInnerHTML={{
+            __html: entryContent[activeEntry]?.about1,
+          }}
+        ></div>
         <div className={`body-p`}>{entryContent[activeEntry]?.about2}</div>
         <div className={`body-p`}>{entryContent[activeEntry]?.about3}</div>
       </div>

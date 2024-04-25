@@ -64,6 +64,10 @@
   background-color: hsl(0, 0%, 95%);
 }
 
+.entry-box-ootify {
+  background-color: hsl(0, 0%, 95%);
+}
+
 .about-box {
   display: flex;
   flex-direction: column;

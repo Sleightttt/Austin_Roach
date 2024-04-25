@@ -16,6 +16,12 @@ import pos2 from "../../assets/images/pos2.jpg";
 import pos3 from "../../assets/images/pos3.jpg";
 import pos4 from "../../assets/images/pos4.jpg";
 import pos5 from "../../assets/images/pos5.jpg";
+import oot1 from "../../assets/images/oot-1.png";
+import oot2 from "../../assets/images/oot-2.png";
+import oot3 from "../../assets/images/oot-3.png";
+import oot4 from "../../assets/images/oot-4.png";
+import oot5 from "../../assets/images/oot-5.png";
+import oot6 from "../../assets/images/oot-6.png";
 
 const Projects = ({ activeTheme }) => {
   const [activeEntry, setActiveEntry] = useState("image");
@@ -40,6 +46,20 @@ const Projects = ({ activeTheme }) => {
       ],
       images: [imagespace, img1, img2, img3, img4, img5, img6],
       liveLink: "https://imagespace.onrender.com/",
+    },
+    ootify: {
+      about:
+        "After learning about this company and interviewing for an internship position, I loved their website design and layout and was determined to replicate it. Originally made in webflow, I decided to recreate it using React, HTML, and CSS. Hosted on vercel, this application features small animations and a beautiful layout. I learned a lot about CSS and how to make a website responsive during this project.",
+      techIcons: [
+        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/axios/axios-plain.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodemon/nodemon-original.svg",
+      ],
+      images: [oot1, oot2, oot3, oot4, oot5, oot6],
+      githubLink: "https://github.com/Sleightttt/ootify-clone",
+      liveLink: "https://ootify-clone.vercel.app/",
     },
     proof: {
       about:
@@ -154,6 +174,17 @@ const Projects = ({ activeTheme }) => {
           <div className="nav-text">
             <span style={{ color: "#06cbfc" }}>Image</span>
             <span style={{ color: "#bb00ff" }}>space</span>
+          </div>
+        </div>
+        <div
+          className={`entry-box entry-box-ootify ${
+            activeEntry === "ootify" ? "active-entry" : ""
+          }`}
+          onClick={() => handleEntryClick("ootify")}
+          style={{ ...(activeEntry === "ootify" ? borderLeft : {}) }}
+        >
+          <div className="nav-text">
+            <span style={{ color: "#005eb5" }}>OOtify</span>
           </div>
         </div>
         <div
