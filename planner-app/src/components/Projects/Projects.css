@@ -31,6 +31,14 @@
   letter-spacing: 1px;
 }
 
+.proof {
+  font-family: "Oswald", sans-serif;
+}
+
+.oot {
+  font-family: "Roboto", sans-serif;
+}
+
 .entry-box {
   display: flex;
   align-items: center;

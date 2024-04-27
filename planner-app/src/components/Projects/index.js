@@ -184,7 +184,9 @@ const Projects = ({ activeTheme }) => {
           style={{ ...(activeEntry === "ootify" ? borderLeft : {}) }}
         >
           <div className="nav-text">
-            <span style={{ color: "#005eb5" }}>OOtify</span>
+            <span className="oot" style={{ color: "#005eb5" }}>
+              OOTify
+            </span>
           </div>
         </div>
         <div
@@ -195,7 +197,9 @@ const Projects = ({ activeTheme }) => {
           style={{ ...(activeEntry === "proof" ? borderLeft : {}) }}
         >
           <div className="nav-text">
-            <span style={{ color: "#e867ff" }}>proofofshred</span>
+            <span className="proof" style={{ color: "#e867ff" }}>
+              proofofshred
+            </span>
           </div>
         </div>
         <div
