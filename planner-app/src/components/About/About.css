@@ -64,13 +64,12 @@
 .about-h-box {
   width: 100%;
   display: flex;
-  margin-top: 1.5%;
 }
 
 .about-h {
   font-family: "Tittilium Web", sans-serif;
   font-weight: 700;
-  font-size: 3rem;
+  font-size: 4rem;
   color: #009bef;
   text-shadow: 2px 2px 2px rgba(98, 98, 98, 0.207);
 }
@@ -118,6 +117,12 @@
 
 .about-icon {
   height: 50px;
+}
+
+.about-icon2 {
+  height: 40px;
+  align-self: center;
+  margin-left: 10px;
 }
 
 @keyframes slideLeft {
@@ -212,7 +217,7 @@
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1300px) {
   .about-body {
     font-size: 1.3rem;
   }
@@ -221,10 +226,11 @@
   }
 }
 
-@media (min-width: 1650px) {
+@media (min-width: 1790px) {
   .about-body {
     font-size: 1.4rem;
   }
+
   .about-icon {
     height: 90px;
   }
