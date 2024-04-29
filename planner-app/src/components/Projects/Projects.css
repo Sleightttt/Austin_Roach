@@ -163,6 +163,7 @@
   width: 50px;
   margin-top: 3px;
 }
+
 .link {
   text-decoration: none;
   color: inherit;
@@ -171,6 +172,7 @@
   align-content: center;
   justify-content: center;
   align-items: center;
+  font-weight: bold;
 }
 
 .link:hover {

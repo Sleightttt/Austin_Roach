@@ -276,6 +276,7 @@ const Projects = ({ activeTheme }) => {
         <div className="git-live">
           <div className="git-live-entry">
             <a
+              title="Github Link"
               href={entryContent[activeEntry].githubLink}
               target="_blank"
               rel="noreferrer"
@@ -297,6 +298,7 @@ const Projects = ({ activeTheme }) => {
               >
                 <div className="link">Live Link</div>
                 <img
+                  title="Live Link"
                   alt="live logo"
                   className="git-live-logo"
                   src={icons.live}
@@ -309,6 +311,7 @@ const Projects = ({ activeTheme }) => {
         <div className="tech-cont">
           {entryContent[activeEntry].techIcons.map((icon, index) => (
             <img
+              title={`Tech Icon ${index}`}
               key={index}
               className="tech-icon"
               src={icon}

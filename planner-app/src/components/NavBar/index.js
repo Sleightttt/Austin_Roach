@@ -35,7 +35,7 @@ const NavBar = ({ activeTheme }) => {
   return (
     <div className="nav-box">
       <div className="nav-cont">
-        <Link to="/" className="icon-cont">
+        <Link title="About" to="/" className="icon-cont">
           <img className="nav-icon" src={icons.information} alt="Projects" />
           <div
             style={{
@@ -48,7 +48,7 @@ const NavBar = ({ activeTheme }) => {
             About
           </div>
         </Link>
-        <Link to="/projects" className="icon-cont">
+        <Link title="Projects" to="/projects" className="icon-cont">
           <img className="nav-icon" src={icons.blueprint} alt="Projects" />
           <div
             style={{
@@ -61,7 +61,7 @@ const NavBar = ({ activeTheme }) => {
             Projects
           </div>
         </Link>
-        <Link to="/career" className="icon-cont">
+        <Link title="Career" to="/career" className="icon-cont">
           <img className="nav-icon" src={icons.contract} alt="Contract Work" />
           <div
             style={{
@@ -74,7 +74,7 @@ const NavBar = ({ activeTheme }) => {
             Career
           </div>
         </Link>
-        <Link to="/contact" className="icon-cont">
+        <Link title="Contact" to="/contact" className="icon-cont">
           <img className="nav-icon" src={icons.contact} alt="Contact" />
           <div
             style={{
