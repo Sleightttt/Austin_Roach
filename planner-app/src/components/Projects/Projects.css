@@ -282,6 +282,7 @@
   .image-cont {
     width: 80%;
     height: 200px;
+    margin-top: 0;
   }
 
   .project-image {
@@ -312,5 +313,9 @@
 
   .link {
     font-size: 0.7rem;
+  }
+  .tracker-diamond {
+    height: 10px;
+    width: 10px;
   }
 }
