@@ -103,12 +103,13 @@
     flex-direction: column;
   }
   .contract-nav {
-    width: 90%;
     max-height: 30px;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
     margin: 5% 2%;
+    align-self: center;
+    width: 100%;
   }
   .contract-body {
     width: 100%;
@@ -129,6 +130,7 @@
     height: 30px;
     font-size: 0.7rem;
     font-weight: 900;
+    width: 40%;
   }
 
   .active-entry2 {
