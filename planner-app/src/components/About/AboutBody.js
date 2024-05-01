@@ -18,7 +18,7 @@ const AboutBody = ({ activeTheme }) => {
   };
 
   const { fill } = themeFixer();
-  console.log(fill);
+
   return (
     <div className="about-body fade-in">
       <div className="about-h-box">
