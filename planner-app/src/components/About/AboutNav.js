@@ -11,6 +11,7 @@ const AboutNav = ({ activeTheme }) => {
   const [currentTitleIndex, setCurrentTitleIndex] = useState(0);
   const [fadeIn, setFadeIn] = useState(false);
   const [initialLoad, setInitialLoad] = useState(true);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -19,7 +20,7 @@ const AboutNav = ({ activeTheme }) => {
         setCurrentTitleIndex((prevIndex) => (prevIndex + 1) % titles.length);
         setFadeIn(true); // Start fading in with the new title
       }, 500); // Wait for 500ms before changing the title
-    }, 4000); // Change the title every 4 seconds (4000 milliseconds)
+    }, 2500); // Change the title every 4 seconds (4000 milliseconds)
 
     // Disable initial sliding animation after the first load
     if (initialLoad) {
@@ -30,7 +31,17 @@ const AboutNav = ({ activeTheme }) => {
     }
 
     return () => clearInterval(intervalId);
-  }, [initialLoad]);
+  }, [initialLoad, titles.length]);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const themeFixer = () => {
     let boxStyle = {};
@@ -58,14 +69,30 @@ const AboutNav = ({ activeTheme }) => {
       <div className={`name-h slide-left ${fadeIn ? "fade-in2" : "fade-out2"}`}>
         Brennan Cota
       </div>
-      <div
-        className={`name-h2 ${initialLoad ? "slide-right" : ""} ${
-          fadeIn ? "fade-in2" : "fade-out2"
-        }`}
-        style={{ ...textStyle }}
-      >
-        {titles[currentTitleIndex]}
-      </div>
+      {windowWidth > 540 ? (
+        <>
+          {titles.map((title, index) => (
+            <div
+              key={index}
+              className={`name-h2 ${initialLoad ? "slide-right" : ""}  ${
+                currentTitleIndex === index ? "" : "hidden"
+              } ${fadeIn ? "fade-in2" : "fade-out2"}`}
+              style={{ ...textStyle }}
+            >
+              {title}
+            </div>
+          ))}
+        </>
+      ) : (
+        <div
+          className={`name-h2 ${initialLoad ? "slide-right" : ""} ${
+            fadeIn ? "fade-in2" : "fade-out2"
+          }`}
+          style={{ ...textStyle }}
+        >
+          {titles[currentTitleIndex]}
+        </div>
+      )}
       <div className="bg-rounded-square" style={{ ...boxStyle }}></div>
     </div>
   );

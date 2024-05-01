@@ -14,11 +14,15 @@
   width: 130%;
   top: -2%;
   left: -15%;
-  height: 40%;
+  height: 103%;
   background: linear-gradient(125deg, #19a2eb, #13618c);
   box-shadow: 20px 20px 60px #c9c9c969, -20px -20px 60px #e1e1e1bf;
   border-radius: 50px;
   z-index: 1;
+}
+
+.hidden {
+  visibility: hidden;
 }
 
 .name-h {
@@ -76,7 +80,7 @@
 
 .about-p {
   line-height: 1.3;
-  margin: 3% 0;
+  margin: 3% 0 0 0;
 }
 
 .me {
@@ -110,7 +114,7 @@
 .about-icon-cont {
   display: flex;
   width: 100%;
-
+  margin: 3% 0 0 0;
   flex-direction: row;
   justify-content: space-around;
 }
@@ -195,7 +199,7 @@
   }
 }
 
-@media (max-width: 830px) {
+@media (max-width: 850px) {
   .about-body {
     margin-top: 20px;
     font-size: 0.9rem;
@@ -217,7 +221,7 @@
   }
 }
 
-@media (min-width: 1300px) {
+@media (min-width: 1320px) {
   .about-body {
     font-size: 1.3rem;
   }
@@ -226,7 +230,7 @@
   }
 }
 
-@media (min-width: 1790px) {
+@media (min-width: 1820px) {
   .about-body {
     font-size: 1.4rem;
   }

@@ -47,9 +47,16 @@ const AboutBody = ({ activeTheme }) => {
         Though challenging, it invigorated my passion for problem solving and
         the desire to keep learning and building my knowledge to become the most
         optimal problem-solver as a programmer. Since graduating I've worked two
-        contract roles, one developing an Agile Chatbot for Scrummasters and
-        another developing solutions for a medical marketing company. I am
-        looking for a full-time opportunity to keep this flame going! Try the{" "}
+        roles, one as a{" "}
+        <span style={{ fontWeight: "bold", color: themeFixer() }}>
+          Full Stack Software Engineer
+        </span>{" "}
+        developing an Agile Chatbot for Scrummasters and another as a{" "}
+        <span style={{ fontWeight: "bold", color: themeFixer() }}>
+          Frontend Engineer
+        </span>{" "}
+        developing solutions for a medical marketing company. I am looking for a
+        full-time opportunity to keep this flame going! Try the{" "}
         <span style={{ fontWeight: "bold", color: themeFixer() }}>
           theme switcher
         </span>{" "}
@@ -83,9 +90,9 @@ const AboutBody = ({ activeTheme }) => {
 	c0,0,0,6.162,0,9.006c0,1.896-0.947,3.792-2.844,5.688c-0.674,0.674-1.707,1.104-2.801,1.342c1.696,0.497,5.226,0.233,6.801-1.342
 	c1.896-1.896,2.844-3.791,2.844-5.688c0-2.844,0-9.006,0-9.006V24.882C48.444,15.719,41.018,8.292,31.854,8.292z"
           />
-          <ellipse fill="#FFFFFF" cx="34.5" cy="37" rx="3.5" ry="5" />
-          <ellipse fill="#FFFFFF" cx="29.959" cy="23.459" rx="2.37" ry="4.74" />
-          <ellipse fill="#FFFFFF" cx="38.49" cy="23.459" rx="2.37" ry="4.74" />
+          <ellipse fill="#eaeaea" cx="34.5" cy="37" rx="3.5" ry="5" />
+          <ellipse fill="#eaeaea" cx="29.959" cy="23.459" rx="2.37" ry="4.74" />
+          <ellipse fill="#eaeaea" cx="38.49" cy="23.459" rx="2.37" ry="4.74" />
         </svg>
         <svg
           className="about-icon"
