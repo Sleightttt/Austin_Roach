@@ -100,7 +100,7 @@
 
 .image-cont {
   width: 90%;
-  height: 350px;
+  max-height: 350px;
   margin: 5%;
   margin-bottom: 0;
   display: flex;
@@ -221,6 +221,18 @@
   .tech-icon {
     height: 70%;
   }
+  .link {
+    flex-direction: row;
+  }
+  .git-live-entry {
+    margin: 0 5%;
+  }
+  .git-live {
+    width: 50%;
+  }
+  .git-live-logo {
+    margin: 0 5%;
+  }
 }
 
 @media (max-width: 700px) {
@@ -295,7 +307,7 @@
   }
 
   .git-live {
-    width: 100%;
+    width: 50%;
   }
 
   .git-live-entry {
