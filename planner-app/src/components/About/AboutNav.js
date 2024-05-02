@@ -20,7 +20,7 @@ const AboutNav = ({ activeTheme }) => {
         setCurrentTitleIndex((prevIndex) => (prevIndex + 1) % titles.length);
         setFadeIn(true); // Start fading in with the new title
       }, 500); // Wait for 500ms before changing the title
-    }, 2500); // Change the title every 4 seconds (4000 milliseconds)
+    }, 2000); // Change the title every 4 seconds (4000 milliseconds)
 
     // Disable initial sliding animation after the first load
     if (initialLoad) {
