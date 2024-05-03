@@ -71,7 +71,7 @@
 }
 
 .about-h {
-  font-family: "Tittilium Web", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-size: 4rem;
   color: #009bef;
@@ -81,6 +81,22 @@
 .about-p {
   line-height: 1.3;
   margin: 3% 0 0 0;
+}
+
+.fade-in-letter {
+  opacity: 0;
+  animation: fadeInAnimation 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeInAnimation {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .me {

@@ -27,7 +27,7 @@ const AboutNav = ({ activeTheme }) => {
       setTimeout(() => {
         setInitialLoad(false);
         setFadeIn(true); // Start fading in the first title after sliding animation
-      }, 1000); // Adjust this timeout to match the sliding animation duration
+      }, 500); // Adjust this timeout to match the sliding animation duration
     }
 
     return () => clearInterval(intervalId);

@@ -240,28 +240,24 @@ const Projects = ({ activeTheme }) => {
             <div key={index} className="tracker-diamond-box">
               {index === currentImageIndex ? (
                 <svg
-                  className="tracker-diamond"
+                  className=" fade-in tracker-diamond"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 512 512"
                   style={{ ...fill }}
                 >
                   <g>
-                    <polygon
-                      class="st0"
-                      points="256,0 72.115,256 256,512 439.885,256 	"
-                    />
+                    <polygon points="256,0 72.115,256 256,512 439.885,256 	" />
                   </g>
                 </svg>
               ) : (
                 <svg
-                  className="tracker-diamond"
+                  className=" tracker-diamond"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 512 512"
                   style={{ ...fill }}
                 >
                   <g>
                     <path
-                      class="st0"
                       d="M456.225,244.286L270.989,7.314C267.382,2.7,261.857,0,255.999,0c-5.856,0-11.381,2.7-14.989,7.314
 		L55.775,244.286c-5.378,6.884-5.378,16.544,0,23.428l185.236,236.972c3.608,4.616,9.132,7.314,14.989,7.314
 		c5.858,0,11.383-2.698,14.99-7.314l185.236-236.972C461.603,260.83,461.603,251.17,456.225,244.286z M255.999,477.522L82.84,256

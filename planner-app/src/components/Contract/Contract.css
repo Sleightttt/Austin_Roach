@@ -39,15 +39,23 @@
   width: 89%;
   background: linear-gradient(125deg, #19a2eb, #13618c);
   border-radius: 50px;
-  transition: 0.3s ease-in-out;
   margin: 5px;
   box-shadow: 2px 2px 6px #c5c5c5, -2px -2px 6px #cacaca;
   color: white;
-  font-family: "Tittilium Web", sans-serif;
-  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+
   font-size: 1.6rem;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.207);
   text-align: center;
+}
+
+.website {
+  text-decoration: none;
+  color: white;
+}
+
+.website:hover {
+  text-decoration: underline;
 }
 
 .entry-box-c:hover {
@@ -64,17 +72,43 @@
 }
 
 .body-title {
-  font-family: "Tittilium Web", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-size: 3rem;
-  margin: 2% 3% 3% 5%;
+  margin: 2% 3% 0% 5%;
   text-align: center;
   color: #00a6ff;
   text-shadow: 2px 2px 2px rgba(98, 98, 98, 0.207);
-  border-bottom: 2px solid #00a6ff;
-
   align-self: flex-start;
 }
+
+.job-info-cont {
+  display: flex;
+  flex-direction: row;
+  align-self: flex-start;
+  margin: 2% 0% 0% 5%;
+}
+
+.job-info-box {
+  display: flex;
+  flex-direction: row;
+  align-self: flex-start;
+  font-family: "Montserrat", sans-serif;
+  background: linear-gradient(125deg, #19a2eb, #13618c);
+  text-align: center;
+
+  border-radius: 20px;
+  padding: 10px;
+  color: white;
+  font-size: 12px;
+  animation: fadeinWidth 2s ease-in;
+}
+
+.job-info-box:nth-child(2) {
+  margin-left: 20px;
+}
+
+/* Fade in width animation*/
 
 @media screen and (max-width: 1320px) {
   .entry-box-c {
@@ -123,18 +157,57 @@
   .body-title {
     font-size: 2rem;
     margin: 3px;
-    margin-bottom: 4%;
+    margin-bottom: 1%;
     align-self: center;
   }
   .entry-box-c {
     height: 30px;
     font-size: 0.7rem;
-    font-weight: 900;
+
     width: 40%;
   }
 
   .active-entry2 {
     border-bottom: none;
+  }
+
+  .job-info-box {
+    display: flex;
+    align-self: center;
+    margin: 3% 0% 0% 0%;
+    flex-direction: column;
+    text-align: center;
+    width: 40%;
+    padding: 5px;
+  }
+
+  .job-info-cont {
+    width: 100%;
+    margin: 0 2%;
+    justify-content: space-around;
+    align-self: center;
+  }
+
+  .job-date {
+    display: flex;
+    justify-content: center;
+  }
+
+  .website {
+    height: 50%;
+
+    justify-content: center;
+  }
+
+  .job-info-box:nth-child(2) {
+    margin-left: 0px;
+  }
+
+  .first {
+    margin-top: 7%;
+  }
+  .body-title {
+    margin-top: 0;
   }
 }
 

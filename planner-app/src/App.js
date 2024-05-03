@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useMemo } from "react";
 import { Route, Routes } from "react-router-dom";
 import NavBar from "./components/NavBar";
 import ViewBox from "./components/ViewBox";
@@ -106,6 +106,11 @@ function App() {
   const handleThemeChange = (theme) => {
     setNextTheme(theme);
   };
+
+  const memoizedContract = useMemo(
+    () => <Contract activeTheme={getThemeName(activeTheme)} />,
+    [activeTheme]
+  );
 
   return (
     <div className="App">
@@ -226,10 +231,7 @@ function App() {
             path="/projects"
             element={<Projects activeTheme={getThemeName(activeTheme)} />}
           />
-          <Route
-            path="/career"
-            element={<Contract activeTheme={getThemeName(activeTheme)} />}
-          />
+          <Route path="/career" element={memoizedContract} />
           <Route
             path="/contact"
             element={<Contact activeTheme={getThemeName(activeTheme)} />}

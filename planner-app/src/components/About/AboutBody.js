@@ -23,7 +23,15 @@ const AboutBody = ({ activeTheme }) => {
     <div className="about-body fade-in">
       <div className="about-h-box">
         <div style={{ color: themeFixer() }} className="about-h">
-          Welcome
+          {Array.from("Welcome!").map((letter, index) => (
+            <span
+              key={index}
+              className="fade-in-letter"
+              style={{ animationDelay: `${index * 0.1}s`, ...fill }}
+            >
+              {letter}
+            </span>
+          ))}
         </div>
       </div>
       <div className="about-p">
@@ -121,15 +129,11 @@ const AboutBody = ({ activeTheme }) => {
           fill={themeFixer()}
         >
           <path
-            class="st0"
             d="M3.7,31H14c1.8,0,3.5-1.1,4.3-2.7l12-25.6C30.6,1.9,30,1,29.2,1h-1.4c-0.5,0-0.9,0.3-1.1,0.7L16.5,23.9
 	c-0.3,0.7-1,1.1-1.7,1.1H5.5c-1.5,0-2.8,0.9-3.2,2.3l-0.4,1.1C1.4,29.7,2.3,31,3.7,31z"
           />
-          <path
-            class="st0"
-            d="M5,15c-2.2,0-4,0.9-4,2v2c0,1.1,1.8,2,4,2s4-0.9,4-2v-2C9,15.9,7.2,15,5,15z"
-          />
-          <line class="st0" x1="23.3" y1="9" x2="27.3" y2="9" />
+          <path d="M5,15c-2.2,0-4,0.9-4,2v2c0,1.1,1.8,2,4,2s4-0.9,4-2v-2C9,15.9,7.2,15,5,15z" />
+          <line x1="23.3" y1="9" x2="27.3" y2="9" />
         </svg>
       </div>
     </div>
