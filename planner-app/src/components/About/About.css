@@ -190,8 +190,8 @@
   .bg-rounded-square {
     width: 100%;
     height: 100%;
-    left: 1%;
-    box-shadow: 10px 10px 10px #c9c9c988, -10px -10px 10px #e1e1e1;
+    left: 0;
+    box-shadow: 10px 10px 10px #d5d5d588, -1px -1px 10px #acacac;
   }
 
   .name-h {
