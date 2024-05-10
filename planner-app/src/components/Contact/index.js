@@ -6,13 +6,11 @@ const Contact = ({ activeTheme }) => {
   useEffect(() => {
     const bodyEntries = document.querySelectorAll(".body-entry");
 
-    // Set initial transition delay
     bodyEntries.forEach((entry, index) => {
       entry.style.transitionDelay = `${index * 0.2}s`;
       entry.classList.add("slide-in");
     });
 
-    // Remove transition delay after initial animation
     setTimeout(() => {
       bodyEntries.forEach((entry) => {
         entry.style.transitionDelay = "0s";
