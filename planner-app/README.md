@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project is a portfolio website built using React. It includes various components such as a navigation bar, about section, projects section, career section, and contact section.
+This project is a portfolio website built using React. It includes various components such as a navigation bar, about section, projects section, career section, and contact section and a theme switcher.
 
 ## Technologies Used
 
