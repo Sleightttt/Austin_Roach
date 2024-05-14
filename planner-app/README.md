@@ -29,10 +29,10 @@ This project is a portfolio website built using React. It includes various compo
 
 - `NavBar`: Navigation bar component.
 - `ViewBox`: Container component for different views.
-- `About`: About section.
-- `Projects`: Projects section.
-- `Contract`: Career section.
-- `Contact`: Contact section.
+- `About`: About section with animations.
+- `Projects`: Projects section with screenshots.
+- `Contract`: Career section with past experience.
+- `Contact`: Contact section to reach me.
 
 ## Usage
 
