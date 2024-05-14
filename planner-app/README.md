@@ -16,6 +16,7 @@ This project is a portfolio website built using React. It includes various compo
 - Responsive design
 - Routing using React Router
 - Modular component structure
+- Mobile centric layout
 
 ## Setup
 
