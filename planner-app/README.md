@@ -43,3 +43,4 @@ This project is a portfolio website built using React. It includes various compo
 ## Credits
 
 - Images used for themes: `unsplash.jpg`, `summer.jpg`, `spring.jpg`, `fall.jpg`.
+- Flaticon icons
