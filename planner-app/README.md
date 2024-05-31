@@ -48,3 +48,4 @@ This project is a portfolio website built using React. It includes various compo
 ## Tasks
 
 - Clean up name/title animation
+- Make page fit better on mobile devices
