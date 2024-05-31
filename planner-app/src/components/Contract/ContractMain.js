@@ -23,12 +23,10 @@ const ContractMain = ({ activeTheme }) => {
     } else if (activeTheme === "spring") {
       boxStyle = { background: "linear-gradient(125deg, #E5B700, #F4653E)" };
       textStyle.color = "#E5B700";
-      // textStyle.borderBottom = "2px solid #E5B700";
       borderLeft.border = "4px solid #E5B700";
     } else if (activeTheme === "fall") {
       boxStyle = { background: "linear-gradient(125deg, #CA0000, #FF8235)" };
       textStyle.color = "#CA0000";
-      // textStyle.borderBottom = "2px solid #CA0000";
       borderLeft.border = "4px solid #FF8235";
     }
     return { textStyle, boxStyle, borderLeft };
