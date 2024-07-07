@@ -13,12 +13,10 @@ const ContractMain = ({ activeTheme }) => {
     if (activeTheme === "snow") {
       textStyle.color = "#009bef";
       borderLeft.border = "4px solid rgb(0, 187, 255)";
-
       boxStyle = { background: "linear-gradient(125deg, #19a2eb, #13618c)" };
     } else if (activeTheme === "summer") {
       boxStyle = { background: "linear-gradient(125deg, #FFAADA, #F4653E)" };
       textStyle.color = "#F4653E";
-
       borderLeft.border = "4px solid #F4653E";
     } else if (activeTheme === "spring") {
       boxStyle = { background: "linear-gradient(125deg, #E5B700, #F4653E)" };
