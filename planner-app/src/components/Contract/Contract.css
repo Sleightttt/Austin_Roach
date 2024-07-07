@@ -49,11 +49,11 @@
   text-align: center;
 }
 .job-title {
-  text-shadow: 2px 1px 2px rgba(0, 0, 0, 0.691);
+  text-shadow: 2px 1px 2px rgba(0, 0, 0, 0.436);
 }
 
 .job-date {
-  text-shadow: 2px 1px 2px rgba(0, 0, 0, 0.6);
+  text-shadow: 2px 1px 2px rgba(0, 0, 0, 0.423);
 }
 
 .website {
@@ -103,13 +103,11 @@
   font-family: "Montserrat", sans-serif;
   background: linear-gradient(125deg, #19a2eb, #13618c);
   text-align: center;
-
   border-radius: 20px;
   padding: 10px;
   color: white;
   font-size: 12px;
   animation: fadeinWidth 2s ease-in;
-  border: 1px solid black;
 }
 
 .job-info-box:nth-child(2) {
