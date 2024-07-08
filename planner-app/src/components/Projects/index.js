@@ -166,7 +166,7 @@ const Projects = ({ activeTheme }) => {
       <div className="project-nav">
         <div
           className={`entry-box entry-box-image ${
-            activeEntry === "image" ? "active-entry" : ""
+            activeEntry === "image" ? "active-entry bounce" : ""
           }`}
           onClick={() => handleEntryClick("image")}
           style={{ ...(activeEntry === "image" ? borderLeft : {}) }}
@@ -178,7 +178,7 @@ const Projects = ({ activeTheme }) => {
         </div>
         <div
           className={`entry-box entry-box-ootify ${
-            activeEntry === "ootify" ? "active-entry" : ""
+            activeEntry === "ootify" ? "active-entry bounce" : ""
           }`}
           onClick={() => handleEntryClick("ootify")}
           style={{ ...(activeEntry === "ootify" ? borderLeft : {}) }}
@@ -191,7 +191,7 @@ const Projects = ({ activeTheme }) => {
         </div>
         <div
           className={`entry-box entry-box-proof ${
-            activeEntry === "proof" ? "active-entry" : ""
+            activeEntry === "proof" ? "active-entry bounce" : ""
           }`}
           onClick={() => handleEntryClick("proof")}
           style={{ ...(activeEntry === "proof" ? borderLeft : {}) }}
@@ -204,7 +204,7 @@ const Projects = ({ activeTheme }) => {
         </div>
         <div
           className={`entry-box entry-box-job ${
-            activeEntry === "job" ? "active-entry" : ""
+            activeEntry === "job" ? "active-entry bounce" : ""
           }`}
           style={{ ...(activeEntry === "job" ? borderLeft : {}) }}
           onClick={() => handleEntryClick("job")}
