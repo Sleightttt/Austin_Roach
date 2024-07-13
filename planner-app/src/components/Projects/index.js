@@ -49,7 +49,7 @@ const Projects = ({ activeTheme }) => {
     },
     ootify: {
       about:
-        "After learning about this company and interviewing for an internship position, I loved their website design and layout and was determined to replicate it. Originally made in webflow, I decided to recreate it using React, HTML, and CSS. Hosted on vercel, this application features small animations and a beautiful layout. I learned a lot about CSS and how to make a website responsive during this project.",
+        "After learning about this company I absolutely loved their website design and layout and was determined to replicate it. Originally made in webflow, I decided to recreate it using React, HTML, and CSS. Hosted on vercel, this application features small animations and a beautiful layout. I learned a lot about CSS and how to make a website responsive during this project.",
       techIcons: [
         "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
         "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/axios/axios-plain.svg",
