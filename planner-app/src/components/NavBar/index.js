@@ -9,6 +9,7 @@ const NavBar = ({ activeTheme }) => {
     return location.pathname === path ? "active" : "";
   };
 
+  //theme consistency
   const themeFixer = () => {
     let textStyle = {},
       borderBottomStyle = {};
