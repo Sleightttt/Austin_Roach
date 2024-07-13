@@ -1,4 +1,5 @@
 const AboutBody = ({ activeTheme }) => {
+  //apply theme to text and bg
   const themeFixer = () => {
     let fill = {};
     if (activeTheme === "snow") {
