@@ -31,6 +31,8 @@ const Projects = ({ activeTheme }) => {
   };
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
+  //dummy data
+
   const entryContent = {
     image: {
       about: `Imagespace is a Full Stack Flickr clone with 5 CRUD features built using a React frontend with a Flask backend. Imagespace features an auto-tagging feature by implementing the AI image recognition API Imagga. Users can sign up for accounts, follow and unfollow other users, both like and comment on photos, and upload their own! Imagespace also features a search bar that allows users to search for other users, images, and tags. Users can also edit their own profiles and delete their own images and comments. This website was built with a 'mobile first' approach, and is fully responsive for mobile, tablet, and desktop.`,
