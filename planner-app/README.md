@@ -54,3 +54,4 @@ This project is a portfolio website built using React. It includes various compo
 - Make text more responsive
 - Add animation to hover bar
 - Bring theme fixer to top level
+- Break components down further
