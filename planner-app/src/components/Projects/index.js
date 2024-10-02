@@ -95,33 +95,34 @@ const Projects = ({ activeTheme }) => {
   const themeFixer = () => {
     let boxStyle = {};
     let textStyle = {};
-    let borderLeft = {};
+    let boxShadow = {};
     let fill = {};
     if (activeTheme === "snow") {
       textStyle.color = "#009bef";
-      borderLeft.border = "4px solid rgb(0, 187, 255)";
+      boxShadow.boxShadow = "0px 0px 10px 5px #009bef";
+
       boxStyle = { background: "linear-gradient(125deg, #19a2eb, #13618c)" };
       fill.fill = "#009bef";
     } else if (activeTheme === "summer") {
       boxStyle = { background: "linear-gradient(125deg, #FFAADA, #F4653E)" };
       textStyle.color = "#F4653E";
-      borderLeft.border = "4px solid #F4653E";
+      boxShadow.boxShadow = "0px 0px 10px 3px #F4653E";
       fill.fill = "#F4653E";
     } else if (activeTheme === "spring") {
       boxStyle = { background: "linear-gradient(125deg, #E5B700, #F4653E)" };
       textStyle.color = "#E5B700";
-      borderLeft.border = "4px solid #E5B700";
+      boxShadow.boxShadow = "0px 0px 10px 3px #E5B700";
       fill.fill = "#E5B700";
     } else if (activeTheme === "fall") {
       boxStyle = { background: "linear-gradient(125deg, #FF8235, #CA0000 )" };
       textStyle.color = "#CA0000";
-      borderLeft.border = "4px solid #CA0000";
+      boxShadow.boxShadow = "0px 0px 10px 5px  #CA0000";
       fill.fill = "#CA0000";
     }
-    return { textStyle, boxStyle, borderLeft, fill };
+    return { textStyle, boxStyle, boxShadow, fill };
   };
 
-  const { textStyle, borderLeft, fill } = themeFixer();
+  const { textStyle, boxShadow, fill } = themeFixer();
 
   const handleLeftArrowClick = () => {
     setCurrentImageIndex((prevIndex) =>
@@ -171,7 +172,7 @@ const Projects = ({ activeTheme }) => {
             activeEntry === "image" ? "active-entry bounce" : ""
           }`}
           onClick={() => handleEntryClick("image")}
-          style={{ ...(activeEntry === "image" ? borderLeft : {}) }}
+          style={{ ...(activeEntry === "image" ? boxShadow : {}) }}
         >
           <div className="nav-text">
             <span style={{ color: "#06cbfc" }}>Image</span>
@@ -183,7 +184,7 @@ const Projects = ({ activeTheme }) => {
             activeEntry === "ootify" ? "active-entry bounce" : ""
           }`}
           onClick={() => handleEntryClick("ootify")}
-          style={{ ...(activeEntry === "ootify" ? borderLeft : {}) }}
+          style={{ ...(activeEntry === "ootify" ? boxShadow : {}) }}
         >
           <div className="nav-text">
             <span className="oot" style={{ color: "#005eb5" }}>
@@ -196,7 +197,7 @@ const Projects = ({ activeTheme }) => {
             activeEntry === "proof" ? "active-entry bounce" : ""
           }`}
           onClick={() => handleEntryClick("proof")}
-          style={{ ...(activeEntry === "proof" ? borderLeft : {}) }}
+          style={{ ...(activeEntry === "proof" ? boxShadow : {}) }}
         >
           <div className="nav-text">
             <span className="proof" style={{ color: "#e867ff" }}>
@@ -208,7 +209,7 @@ const Projects = ({ activeTheme }) => {
           className={`entry-box entry-box-job ${
             activeEntry === "job" ? "active-entry bounce" : ""
           }`}
-          style={{ ...(activeEntry === "job" ? borderLeft : {}) }}
+          style={{ ...(activeEntry === "job" ? boxShadow : {}) }}
           onClick={() => handleEntryClick("job")}
         >
           <div className="nav-text">

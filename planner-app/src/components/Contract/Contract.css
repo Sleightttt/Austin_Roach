@@ -171,10 +171,6 @@
     width: 40%;
   }
 
-  .active-entry2 {
-    border-bottom: none;
-  }
-
   .job-info-box {
     display: flex;
     align-self: center;

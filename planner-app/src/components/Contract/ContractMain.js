@@ -9,25 +9,25 @@ const ContractMain = ({ activeTheme }) => {
   const themeFixer = () => {
     let boxStyle = {};
     let textStyle = {};
-    let borderLeft = {};
+    let boxShadow = {};
     if (activeTheme === "snow") {
       textStyle.color = "#009bef";
-      borderLeft.border = "4px solid rgb(0, 187, 255)";
+      boxShadow.boxShadow = "0px 0px 10px 5px #009bef";
       boxStyle = { background: "linear-gradient(125deg, #19a2eb, #13618c)" };
     } else if (activeTheme === "summer") {
       boxStyle = { background: "linear-gradient(125deg, #FFAADA, #F4653E)" };
       textStyle.color = "#F4653E";
-      borderLeft.border = "4px solid #F4653E";
+      boxShadow.boxShadow = "0px 0px 10px 5px #F4653E";
     } else if (activeTheme === "spring") {
       boxStyle = { background: "linear-gradient(125deg, #E5B700, #F4653E)" };
       textStyle.color = "#E5B700";
-      borderLeft.border = "4px solid #E5B700";
+      boxShadow.boxShadow = "0px 0px 5px 5px #E5B700";
     } else if (activeTheme === "fall") {
       boxStyle = { background: "linear-gradient(125deg, #CA0000, #FF8235)" };
       textStyle.color = "#CA0000";
-      borderLeft.border = "4px solid #FF8235";
+      boxShadow.boxShadow = "0px 0px 10px 5px  #CA0000";
     }
-    return { textStyle, boxStyle, borderLeft };
+    return { textStyle, boxStyle, boxShadow };
   };
 
   const LifeScienceMedia = () => (
@@ -100,19 +100,19 @@ const ContractMain = ({ activeTheme }) => {
         </span>{" "}
         teams have allowed me to work with other developers, designers, and
         project managers to create a product that is not only functional, but
-        also visually appealing. I have also been able to work with clients to
-        understand their needs and create a product that meets their
-        expectations.
+        also visually appealing. Working with clients directly to understand
+        their needs and create a product that meets their expectations has been
+        a rewarding experience.{" "}
       </div>
       <div className="body-p">
         Utilizing the{" "}
         <span style={{ color: `${textStyle.color}`, fontWeight: "bold" }}>
           Agile methodology
         </span>
-        , I have been able to work in a fast-paced environment and have been
-        able to adapt to changes in project scope and requirements. This has
-        allowed me to work on multiple projects at once and has allowed me to
-        keep challenging myself to become to best dev I can.
+        , I have been able to work in a fast-paced environment, adapting to
+        changes in both project scope and requirements. This has allowed me to
+        work on multiple projects at once and has allowed me to keep challenging
+        myself to become a better developer.
       </div>
     </>
   );
@@ -221,7 +221,7 @@ const ContractMain = ({ activeTheme }) => {
     </>
   );
 
-  const { textStyle, boxStyle, borderLeft } = themeFixer();
+  const { textStyle, boxStyle, boxShadow } = themeFixer();
 
   const handleClick = (entryKey) => {
     setActiveEntry(entryKey);
@@ -234,7 +234,7 @@ const ContractMain = ({ activeTheme }) => {
           className={`entry-box-c ${
             activeEntry === "life" ? "active-entry2 bounce" : ""
           }`}
-          style={{ ...boxStyle, ...(activeEntry === "life" ? borderLeft : {}) }}
+          style={{ ...boxStyle, ...(activeEntry === "life" ? boxShadow : {}) }}
           onClick={() => handleClick("life")}
         >
           Lifescience Media
@@ -243,7 +243,7 @@ const ContractMain = ({ activeTheme }) => {
           className={`entry-box-c ${
             activeEntry === "big" ? "active-entry2 bounce" : ""
           }`}
-          style={{ ...boxStyle, ...(activeEntry === "big" ? borderLeft : {}) }}
+          style={{ ...boxStyle, ...(activeEntry === "big" ? boxShadow : {}) }}
           onClick={() => handleClick("big")}
         >
           Big Deal Digital
