@@ -37,22 +37,22 @@ function App() {
 
     if (activeTheme === snow) {
       textStyle.color = "#009bef";
-      borderStyle = { border: "2px solid #009bef" };
+      borderStyle = { outline: "1px solid black" };
       decoColor = { textDecorationColor: "#19a2eb" };
       fill = { fill: "#009bef" };
     } else if (activeTheme === summer) {
       textStyle.color = "#F4653E";
-      borderStyle = { border: "2px solid #F4653E" };
+      borderStyle = { outline: "1px solid black" };
       decoColor = { textDecorationColor: "#F4653E" };
       fill = { fill: "#F4653E" };
     } else if (activeTheme === fall) {
       textStyle.color = "#CA0000";
-      borderStyle = { border: "2px solid #CA0000" };
+      borderStyle = { outline: "1px solid black" };
       decoColor = { textDecorationColor: "#CA0000" };
       fill = { fill: "#CA0000" };
     } else if (activeTheme === spring) {
       textStyle.color = "#E5B700";
-      borderStyle = { border: "2px solid #E5B700" };
+      borderStyle = { outline: "1px solid black" };
       decoColor = { textDecorationColor: "#E5B700" };
       fill = { fill: "#E5B700" };
     }
