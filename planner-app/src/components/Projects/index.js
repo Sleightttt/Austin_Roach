@@ -99,7 +99,7 @@ const Projects = ({ activeTheme }) => {
     let fill = {};
     if (activeTheme === "snow") {
       textStyle.color = "#009bef";
-      boxShadow.boxShadow = "0px 0px 10px 5px #009bef";
+      boxShadow.boxShadow = "0px 0px 5px 3px #009bef";
 
       boxStyle = { background: "linear-gradient(125deg, #19a2eb, #13618c)" };
       fill.fill = "#009bef";
