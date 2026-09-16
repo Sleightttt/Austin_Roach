@@ -15,6 +15,7 @@ html {
   display: flex;
   flex-direction: column;
   height: 100vh;
+  transition: --accent 1s ease, --gradient-start 1s ease, --gradient-end 1s ease;
 }
 
 .background-layer {

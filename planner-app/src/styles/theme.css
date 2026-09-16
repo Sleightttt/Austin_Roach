@@ -2,24 +2,57 @@
   Single source of truth for theme colors. Every component reads these
   via var(--accent) / var(--gradient) instead of branching on the
   active theme name in JS.
+
+  --accent, --gradient-start and --gradient-end are registered with
+  @property so the browser treats them as animatable colors: when
+  [data-theme] switches, .App's `transition` (see app.css) smoothly
+  interpolates them, and every descendant using var(--accent) /
+  var(--gradient) repaints in sync each frame - no per-element
+  transitions needed, and no JS timers for color.
 */
+
+@property --accent {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #009bef;
+}
+
+@property --gradient-start {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #19a2eb;
+}
+
+@property --gradient-end {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #13618c;
+}
 
 [data-theme="snow"] {
   --accent: #009bef;
-  --gradient: linear-gradient(125deg, #19a2eb, #13618c);
+  --gradient-start: #19a2eb;
+  --gradient-end: #13618c;
 }
 
 [data-theme="spring"] {
   --accent: #e5b700;
-  --gradient: linear-gradient(125deg, #e5b700, #f4653e);
+  --gradient-start: #e5b700;
+  --gradient-end: #f4653e;
 }
 
 [data-theme="summer"] {
   --accent: #f4653e;
-  --gradient: linear-gradient(125deg, #ffaada, #f4653e);
+  --gradient-start: #ffaada;
+  --gradient-end: #f4653e;
 }
 
 [data-theme="fall"] {
   --accent: #ca0000;
-  --gradient: linear-gradient(125deg, #ff8235, #ca0000);
+  --gradient-start: #ff8235;
+  --gradient-end: #ca0000;
+}
+
+.App {
+  --gradient: linear-gradient(125deg, var(--gradient-start), var(--gradient-end));
 }

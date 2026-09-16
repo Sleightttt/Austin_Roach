@@ -13,7 +13,8 @@ const TRANSITION_MS = 1000;
 
 function App() {
   const [activeTheme, setActiveTheme] = useState(DEFAULT_THEME);
-  const [incomingTheme, setIncomingTheme] = useState(null);
+  const [baseBg, setBaseBg] = useState(DEFAULT_THEME.bg);
+  const [incomingBg, setIncomingBg] = useState(null);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const dropdownRef = useRef(null);
 
@@ -27,34 +28,47 @@ function App() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
+  // Preload every theme's background image up front, so switching to a
+  // theme for the first time doesn't stall the crossfade on a fetch.
   useEffect(() => {
-    if (!incomingTheme) return undefined;
+    THEMES.forEach((theme) => {
+      const img = new Image();
+      img.src = theme.bg;
+    });
+  }, []);
+
+  useEffect(() => {
+    if (!incomingBg) return undefined;
 
     // Let the incoming image finish fading in on top of the old one
     // before promoting it, so the crossfade never shows a "jump".
     const timeout = setTimeout(() => {
-      setActiveTheme(incomingTheme);
-      setIncomingTheme(null);
+      setBaseBg(incomingBg);
+      setIncomingBg(null);
     }, TRANSITION_MS);
 
     return () => clearTimeout(timeout);
-  }, [incomingTheme]);
+  }, [incomingBg]);
 
   const handleThemeSelect = (theme) => {
     setDropdownOpen(false);
     if (theme.name === activeTheme.name) return;
-    setIncomingTheme(theme);
+    // Colors switch immediately - .App's CSS transition on --accent /
+    // --gradient-* animates them smoothly. The background image still
+    // needs a JS-managed crossfade since <img> src can't transition.
+    setActiveTheme(theme);
+    setIncomingBg(theme.bg);
   };
 
   return (
     <div className="App" data-theme={activeTheme.name}>
       <div className="background-layer">
-        <img draggable="false" className="background-image" src={activeTheme.bg} alt="" />
-        {incomingTheme && (
+        <img draggable="false" className="background-image" src={baseBg} alt="" />
+        {incomingBg && (
           <img
             draggable="false"
             className="background-image fade-in"
-            src={incomingTheme.bg}
+            src={incomingBg}
             alt=""
           />
         )}
