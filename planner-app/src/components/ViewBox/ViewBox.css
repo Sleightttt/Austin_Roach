@@ -6,15 +6,23 @@
   height: 85%;
   align-self: center;
   width: 90%;
-  border-radius: 20px;
-  border: 1px solid black;
-  margin: 5px;
-  border-radius: 50px;
-
-  background: #f2f3f7a8;
-  box-shadow: inset 20px 20px 60px #cecfd2, inset -20px -20px 60px #ffffff;
+  margin: var(--space-sm);
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: var(--shadow-panel);
   z-index: 1;
 }
 
-@media screen and (max-width: 540px) {
+/* Shared panel styling for each page's root container, so page CSS
+   files don't each redeclare the same shadow/radius/overflow block.
+   overflow-y is "auto" rather than "hidden" so content taller than
+   the panel (e.g. About's copy on narrow/mobile widths) scrolls
+   instead of getting silently clipped. */
+.page-panel {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius-lg);
+  overflow-x: hidden;
+  overflow-y: auto;
 }

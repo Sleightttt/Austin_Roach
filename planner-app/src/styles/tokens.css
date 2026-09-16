@@ -1,0 +1,27 @@
+/*
+  Shared design tokens. Breakpoints aren't supported as CSS custom
+  properties inside @media conditions, so the values below (480 / 768 /
+  1024 / 1280) are just the literals every component's media queries
+  should use instead of the previous ad-hoc set.
+*/
+
+:root {
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 40px;
+
+  --radius-sm: 12px;
+  --radius-md: 20px;
+  --radius-lg: 28px;
+
+  --shadow-sm: 0 2px 8px rgba(15, 23, 42, 0.06);
+  --shadow-panel: 0 12px 32px rgba(15, 23, 42, 0.08);
+  --shadow-raised: 0 6px 18px rgba(15, 23, 42, 0.1);
+
+  --border-subtle: 1px solid rgba(15, 23, 42, 0.08);
+
+  --font-body: "Montserrat", sans-serif;
+  --font-display: "Titillium Web", sans-serif;
+}

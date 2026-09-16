@@ -1,0 +1,25 @@
+/*
+  Single source of truth for theme colors. Every component reads these
+  via var(--accent) / var(--gradient) instead of branching on the
+  active theme name in JS.
+*/
+
+[data-theme="snow"] {
+  --accent: #009bef;
+  --gradient: linear-gradient(125deg, #19a2eb, #13618c);
+}
+
+[data-theme="spring"] {
+  --accent: #e5b700;
+  --gradient: linear-gradient(125deg, #e5b700, #f4653e);
+}
+
+[data-theme="summer"] {
+  --accent: #f4653e;
+  --gradient: linear-gradient(125deg, #ffaada, #f4653e);
+}
+
+[data-theme="fall"] {
+  --accent: #ca0000;
+  --gradient: linear-gradient(125deg, #ff8235, #ca0000);
+}

@@ -3,93 +3,32 @@ import { Link, useLocation } from "react-router-dom";
 import "./NavBar.css";
 import icons from "../../assets/icons";
 
-const NavBar = ({ activeTheme }) => {
+const NAV_ITEMS = [
+  { path: "/", label: "About", icon: icons.information },
+  { path: "/projects", label: "Projects", icon: icons.blueprint },
+  { path: "/career", label: "Career", icon: icons.contract },
+  { path: "/contact", label: "Contact", icon: icons.contact },
+];
+
+const NavBar = () => {
   const location = useLocation();
-  const isActive = (path) => {
-    return location.pathname === path ? "active" : "";
-  };
-
-  //theme consistency
-  const themeFixer = () => {
-    let textStyle = {},
-      borderBottomStyle = {};
-
-    if (activeTheme === "snow") {
-      textStyle.color = "#009bef";
-      borderBottomStyle = { borderBottom: "2px solid #009bef" };
-    } else if (activeTheme === "summer") {
-      textStyle.color = "#F4653E";
-      borderBottomStyle = { borderBottom: "2px solid #F4653E" };
-    } else if (activeTheme === "fall") {
-      textStyle.color = "#CA0000";
-      borderBottomStyle = { borderBottom: "2px solid #CA0000" };
-    } else if (activeTheme === "spring") {
-      textStyle.color = "#E5B700";
-      borderBottomStyle = { borderBottom: "2px solid #E5B700" };
-    }
-
-    return { textStyle, borderBottomStyle };
-  };
-
-  const { textStyle, borderBottomStyle } = themeFixer();
 
   return (
-    <div className="nav-box">
+    <nav className="nav-box">
       <div className="nav-cont">
-        <Link title="About" to="/" className="icon-cont">
-          <img className="nav-icon" src={icons.information} alt="Projects" />
-          <div
-            style={{
-              ...textStyle,
-              ...(isActive("/") ? borderBottomStyle : {}),
-              transition: "0.2s",
-            }}
-            className={`logo-text ${isActive("/")}`}
+        {NAV_ITEMS.map(({ path, label, icon }) => (
+          <Link
+            key={path}
+            title={label}
+            to={path}
+            className={`icon-cont ${location.pathname === path ? "active" : ""}`}
           >
-            About
-          </div>
-        </Link>
-        <Link title="Projects" to="/projects" className="icon-cont">
-          <img className="nav-icon" src={icons.blueprint} alt="Projects" />
-          <div
-            style={{
-              ...textStyle,
-              ...(isActive("/projects") ? borderBottomStyle : {}),
-              transition: "0.2s",
-            }}
-            className={`logo-text ${isActive("/projects")}`}
-          >
-            Projects
-          </div>
-        </Link>
-        <Link title="Career" to="/career" className="icon-cont">
-          <img className="nav-icon" src={icons.contract} alt="Contract Work" />
-          <div
-            style={{
-              ...textStyle,
-              ...(isActive("/career") ? borderBottomStyle : {}),
-              transition: "0.2s",
-            }}
-            className={`logo-text ${isActive("/contract")}`}
-          >
-            Career
-          </div>
-        </Link>
-        <Link title="Contact" to="/contact" className="icon-cont">
-          <img className="nav-icon" src={icons.contact} alt="Contact" />
-          <div
-            style={{
-              ...textStyle,
-              ...(isActive("/contact") ? borderBottomStyle : {}),
-              transition: "0.2s",
-            }}
-            className={`logo-text ${isActive("/contact")}`}
-          >
-            Contact
-          </div>
-        </Link>
+            <img className="nav-icon" src={icon} alt="" />
+            <div className="logo-text">{label}</div>
+          </Link>
+        ))}
       </div>
-    </div>
+    </nav>
   );
 };
 

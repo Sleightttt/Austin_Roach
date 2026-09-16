@@ -1,13 +1,14 @@
 import { useState, useEffect } from "react";
 
-const AboutNav = ({ activeTheme }) => {
-  const titles = [
-    "Software Engineer",
-    "Full Stack Software Engineer",
-    "Front End Engineer",
-    "U/X Designer",
-    "Mobile Developer",
-  ];
+const TITLES = [
+  "Software Engineer",
+  "Full Stack Software Engineer",
+  "Front End Engineer",
+  "U/X Designer",
+  "Mobile Developer",
+];
+
+const AboutNav = () => {
   const [currentTitleIndex, setCurrentTitleIndex] = useState(0);
   const [fadeIn, setFadeIn] = useState(false);
   const [initialLoad, setInitialLoad] = useState(true);
@@ -15,54 +16,28 @@ const AboutNav = ({ activeTheme }) => {
 
   useEffect(() => {
     const intervalId = setInterval(() => {
-      setFadeIn(false); // Start fading out
+      setFadeIn(false);
       setTimeout(() => {
-        setCurrentTitleIndex((prevIndex) => (prevIndex + 1) % titles.length);
-        setFadeIn(true); // Start fading in with the new title
-      }, 500); // Wait for 500ms before changing the title
-    }, 2000); // Change the title every 4 seconds (4000 milliseconds)
+        setCurrentTitleIndex((prevIndex) => (prevIndex + 1) % TITLES.length);
+        setFadeIn(true);
+      }, 500);
+    }, 2000);
 
-    // Disable initial sliding animation after the first load
     if (initialLoad) {
       setTimeout(() => {
         setInitialLoad(false);
-        setFadeIn(true); // Start fading in the first title after sliding animation
-      }, 500); // Adjust this timeout to match the sliding animation duration
+        setFadeIn(true);
+      }, 500);
     }
 
     return () => clearInterval(intervalId);
-  }, [initialLoad, titles.length]);
+  }, [initialLoad]);
 
   useEffect(() => {
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-    };
-
+    const handleResize = () => setWindowWidth(window.innerWidth);
     window.addEventListener("resize", handleResize);
-
     return () => window.removeEventListener("resize", handleResize);
   }, []);
-
-  const themeFixer = () => {
-    let boxStyle = {};
-    let textStyle = {};
-    if (activeTheme === "snow") {
-      textStyle.color = "#67caff";
-      boxStyle = { background: "linear-gradient(125deg, #19a2eb, #13618c)" };
-    } else if (activeTheme === "summer") {
-      boxStyle = { background: "linear-gradient(125deg, #FFAADA, #F4653E)" };
-      textStyle.color = "#ffb39f";
-    } else if (activeTheme === "spring") {
-      boxStyle = { background: "linear-gradient(125deg, #E5B700, #F4653E)" };
-      textStyle.color = "#fcdf1d";
-    } else if (activeTheme === "fall") {
-      boxStyle = { background: "linear-gradient(125deg,  #FF8235, #CA0000)" };
-      textStyle.color = "#fe8c46";
-    }
-    return { textStyle, boxStyle };
-  };
-
-  const { textStyle, boxStyle } = themeFixer();
 
   return (
     <div className="aboutnav-cont">
@@ -70,30 +45,26 @@ const AboutNav = ({ activeTheme }) => {
         Brennan Cota
       </div>
       {windowWidth > 540 ? (
-        <>
-          {titles.map((title, index) => (
-            <div
-              key={index}
-              className={`name-h2 ${initialLoad ? "slide-right" : ""}  ${
-                currentTitleIndex === index ? "" : "hidden"
-              } ${fadeIn ? "fade-in2" : "fade-out2"}`}
-              style={{ ...textStyle }}
-            >
-              {title}
-            </div>
-          ))}
-        </>
+        TITLES.map((title, index) => (
+          <div
+            key={title}
+            className={`name-h2 ${initialLoad ? "slide-right" : ""} ${
+              currentTitleIndex === index ? "" : "hidden"
+            } ${fadeIn ? "fade-in2" : "fade-out2"}`}
+          >
+            {title}
+          </div>
+        ))
       ) : (
         <div
           className={`name-h2 ${initialLoad ? "slide-right" : ""} ${
             fadeIn ? "fade-in2" : "fade-out2"
           }`}
-          style={{ ...textStyle }}
         >
-          {titles[currentTitleIndex]}
+          {TITLES[currentTitleIndex]}
         </div>
       )}
-      <div className="bg-rounded-square" style={{ ...boxStyle }}></div>
+      <div className="bg-rounded-square"></div>
     </div>
   );
 };

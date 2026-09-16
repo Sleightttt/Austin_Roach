@@ -2,7 +2,31 @@ import "./Contact.css";
 import React, { useEffect } from "react";
 import icons from "../../assets/icons";
 
-const Contact = ({ activeTheme }) => {
+const CONTACT_METHODS = [
+  { key: "phone", icon: icons.mobile, content: "(909) 210-6114" },
+  { key: "email", icon: icons.mail, content: "brennancota@yahoo.com" },
+  {
+    key: "linkedin",
+    icon: icons.linkedin,
+    href: "https://www.linkedin.com/in/brennan-cota-11768aa6/",
+    content: "LinkedIn Link",
+  },
+  {
+    key: "resume",
+    icon: icons.resume,
+    href: require("../../assets/Resume.pdf"),
+    download: "Resume.pdf",
+    content: "Resume Download",
+  },
+  {
+    key: "github",
+    icon: icons.logo,
+    href: "https://github.com/Sleightttt",
+    content: "Github Link",
+  },
+];
+
+const Contact = () => {
   useEffect(() => {
     const bodyEntries = document.querySelectorAll(".body-entry");
 
@@ -11,102 +35,50 @@ const Contact = ({ activeTheme }) => {
       entry.classList.add("slide-in");
     });
 
-    setTimeout(() => {
+    const timeout = setTimeout(() => {
       bodyEntries.forEach((entry) => {
         entry.style.transitionDelay = "0s";
       });
     }, bodyEntries.length * 200);
 
-    return () => {
-      clearTimeout();
-    };
+    return () => clearTimeout(timeout);
   }, []);
 
-  const themeFixer = () => {
-    let bgStyle = {};
-    if (activeTheme === "snow") {
-      bgStyle = {
-        background: "linear-gradient(125deg, #19a2eb, #13618c)",
-      };
-    } else if (activeTheme === "summer") {
-      bgStyle = {
-        background: "linear-gradient(125deg, #FFAADA, #F4653E)",
-      };
-    } else if (activeTheme === "spring") {
-      bgStyle = { background: "linear-gradient(125deg, #E5B700, #F4653E)" };
-    } else if (activeTheme === "fall") {
-      bgStyle = { background: "linear-gradient(125deg,#FF8235, #CA0000 )" };
-    }
-    return { bgStyle };
-  };
-
-  const { bgStyle } = themeFixer();
-
   return (
-    <div className="contact-cont">
+    <div className="contact-cont page-panel">
       <div className="reach-me">
         <div className="reach-me-text">
           You can reach me in any of the following ways:
         </div>
       </div>
-      <div className="reach-me-body ">
-        <div className="body-entry top" style={{ ...bgStyle }}>
-          <div className="reach-icon-box">
-            <img className="reach-icon" src={icons.mobile} alt="phone" />
+      <div className="reach-me-body">
+        {CONTACT_METHODS.map(({ key, icon, href, download, content }, index) => (
+          <div
+            key={key}
+            className={`body-entry ${index === 0 ? "top" : ""} ${
+              index === CONTACT_METHODS.length - 1 ? "bottom" : ""
+            }`}
+          >
+            <div className="reach-icon-box">
+              <img className="reach-icon" src={icon} alt="" />
+            </div>
+            <div className="entry-text">
+              {href ? (
+                <a
+                  className="anchor-link"
+                  href={href}
+                  download={download}
+                  target={download ? undefined : "_blank"}
+                  rel={download ? undefined : "noopener noreferrer"}
+                >
+                  {content}
+                </a>
+              ) : (
+                content
+              )}
+            </div>
           </div>
-          <div className="entry-text"> (909) 210-6114</div>
-        </div>
-        <div className="body-entry" style={{ ...bgStyle }}>
-          <div className="reach-icon-box">
-            <img className="reach-icon" src={icons.mail} alt="email" />
-          </div>
-          <div className="entry-text">brennancota@yahoo.com</div>
-        </div>
-        <div className="body-entry" style={{ ...bgStyle }}>
-          <div className="reach-icon-box">
-            <img className="reach-icon" src={icons.linkedin} alt="linkedin" />
-          </div>
-          <div className="entry-text">
-            <a
-              className="anchor-link"
-              href="https://www.linkedin.com/in/brennan-cota-11768aa6/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              LinkedIn Link
-            </a>
-          </div>
-        </div>
-        <div className="body-entry" style={{ ...bgStyle }}>
-          <div className="reach-icon-box">
-            <img className="reach-icon" src={icons.resume} alt="resume" />
-          </div>
-          <div className="entry-text">
-            <a
-              className="anchor-link"
-              href={require("../../assets/Resume.pdf")}
-              download="Resume.pdf"
-            >
-              Resume Download
-            </a>
-          </div>
-        </div>
-        <div className="body-entry bottom" style={{ ...bgStyle }}>
-          <div className="reach-icon-box">
-            <img className="reach-icon" src={icons.logo} alt="github" />
-          </div>
-          <div className="entry-text">
-            {" "}
-            <a
-              className="anchor-link"
-              href="https://github.com/Sleightttt"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Github Link
-            </a>
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   );

@@ -2,11 +2,11 @@ import AboutNav from "./AboutNav";
 import AboutBody from "./AboutBody";
 import "./About.css";
 
-const About = ({ activeTheme }) => {
+const About = () => {
   return (
-    <div className="about-cont">
-      <AboutNav activeTheme={activeTheme} />
-      <AboutBody activeTheme={activeTheme} />
+    <div className="about-cont page-panel">
+      <AboutNav />
+      <AboutBody />
     </div>
   );
 };

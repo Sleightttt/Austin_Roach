@@ -1,14 +1,6 @@
 .contact-cont {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  border-radius: 50px;
   flex-direction: column;
   align-items: center;
-
-  overflow: hidden;
-  text-shadow: 1px 1px 2px rgba(78, 78, 78, 0.2);
-  box-shadow: inset 10px 20px 50px #f0f3fb, inset -20px -20px 50px #f7f8f8;
 }
 
 .body-entry {
@@ -22,7 +14,6 @@
   align-items: center;
   width: 80%;
   height: 20%;
-  border-radius: 50px;
 }
 
 .reach-me-body {
@@ -30,10 +21,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-
   width: 80%;
   height: 70%;
-  border-radius: 50px;
 }
 
 .slide-in {
@@ -43,13 +32,13 @@
 }
 
 .top {
-  border-top-left-radius: 50px;
-  border-top-right-radius: 50px;
+  border-top-left-radius: var(--radius-lg);
+  border-top-right-radius: var(--radius-lg);
 }
 
 .bottom {
-  border-bottom-left-radius: 50px;
-  border-bottom-right-radius: 50px;
+  border-bottom-left-radius: var(--radius-lg);
+  border-bottom-right-radius: var(--radius-lg);
 }
 
 .reach-icon-box img {
@@ -64,23 +53,20 @@
   text-align: center;
   height: 90px;
   width: 300px;
-  border: 1px solid black;
-  transition-behavior: smooth;
-  transition-delay: 0ms;
+  background: var(--gradient);
+  transition: transform 0.2s ease;
 }
 
 .body-entry:hover {
   cursor: pointer;
-  transform: scale(1.05);
+  transform: scale(1.04);
 }
 
 .reach-me-text {
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--font-body);
   font-weight: 400;
   font-size: 2rem;
-  overflow: wrap;
-  color: rgb(50, 50, 50);
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.207);
+  color: rgb(60, 60, 60);
   letter-spacing: 1px;
 }
 
@@ -91,12 +77,12 @@
 
 .anchor-link:hover {
   text-decoration: underline;
-  color: rgb(160, 160, 160);
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .entry-text {
   color: white;
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--font-body);
   width: 80%;
 }
 
@@ -105,18 +91,24 @@
   height: 40px;
   display: inline-block;
   vertical-align: middle;
-  margin-left: 10px;
+  margin-left: var(--space-sm);
 }
 
 .reach-icon {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  transition: 0.3s;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 768px) {
   .reach-me-text {
     font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .body-entry {
+    width: 90%;
+    height: 70px;
   }
 }

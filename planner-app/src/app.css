@@ -1,9 +1,14 @@
+@import "./styles/tokens.css";
+@import "./styles/theme.css";
+@import "./styles/shared.css";
+
 body,
 html {
   margin: 0;
   padding: 0;
   height: 100%;
   background: #f0f2ff;
+  font-family: var(--font-body);
 }
 
 .App {
@@ -12,140 +17,92 @@ html {
   height: 100vh;
 }
 
-.content {
-  flex-grow: 1;
-  overflow-y: auto;
-}
-
-.video-background {
+.background-layer {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 50%;
-  z-index: 0;
-  overflow: hidden;
-}
-
-.video-background2 {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  object-fit: cover;
+  inset: 0;
   z-index: 0;
   overflow: hidden;
   user-select: none;
 }
 
-.video-background2 img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: opacity 1s ease;
-  z-index: 0;
-}
-
 .background-image {
   position: absolute;
-  top: 0;
-  left: 0;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: opacity 1s ease;
   z-index: 1;
 }
 
-.background-image.next {
-  opacity: 0;
-}
-
-.fade-out {
-  animation: fadeOut 1s ease forwards;
+/* The incoming background image is layered on top of (and fades in
+   over) the current one, which stays put underneath until the
+   crossfade finishes and App promotes the new image. */
+.background-image.fade-in {
+  z-index: 2;
+  animation: fadeIn 1s ease forwards;
 }
 
 .fade-in {
   animation: fadeIn 1s ease forwards;
 }
 
-.next {
-  opacity: 0;
-}
-
-.arrow {
-  position: absolute;
-  right: -40px;
-  width: 20px;
-  height: 80%;
-  background: center/contain no-repeat;
-  animation: moveArrow 3s linear infinite;
-}
-
-@keyframes moveArrow {
-  0% {
-    right: 40px;
-  }
-  100% {
-    right: 60px;
-  }
-}
-@keyframes fadeOut {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
 @keyframes fadeIn {
-  0% {
+  from {
     opacity: 0;
   }
-  100% {
+  to {
     opacity: 1;
   }
 }
 
-.theme {
+.theme-switcher {
   display: flex;
   justify-content: center;
-  align-content: center;
   align-items: center;
   position: fixed;
-  right: 20px;
-  bottom: 10px;
+  right: var(--space-lg);
+  bottom: var(--space-md);
   height: 40px;
   width: 40px;
-  border-radius: 12px;
+  border-radius: var(--radius-sm);
   background-color: white;
-
+  box-shadow: var(--shadow-raised);
   z-index: 2;
-  font-family: "Montserrat", sans-serif;
-  transition: 0.1s ease;
+  transition: 0.15s ease;
 }
 
-.theme:hover,
-.theme-icon:hover {
+.theme-switcher:hover {
   cursor: pointer;
 }
 
 .theme-icon {
-  height: 30px;
-  width: 30px;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 12px;
+  height: 22px;
+  width: 22px;
+  fill: var(--accent);
 }
 
-.open {
-  height: 100px;
-  width: 100px;
+.theme-switcher.open {
+  height: auto;
+  width: auto;
+  border-radius: var(--radius-sm);
+  padding: var(--space-sm) var(--space-md);
+}
+
+.theme-options {
+  display: flex;
   flex-direction: column;
+  gap: var(--space-xs);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: #444;
 }
 
-.open > div:hover {
+.theme-option:hover {
   text-decoration: underline;
+  text-decoration-color: var(--accent);
+}
+
+.theme-option.active {
+  color: var(--accent);
+  font-weight: 600;
 }

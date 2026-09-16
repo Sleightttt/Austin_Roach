@@ -2,22 +2,17 @@
   position: relative;
   display: flex;
   justify-content: center;
-  height: 100px;
-  margin: 5px;
-  font-family: "Montserrat", sans-serif;
+  height: 90px;
+  margin: var(--space-sm);
+  font-family: var(--font-body);
 }
 
 .logo-text {
-  color: #009bef;
-  font-weight: 300;
-  font-size: 1.2rem;
-  border-bottom: #009bef00 2px solid;
-  transition: 0.3s ease-in-out;
-}
-
-.logo-link {
-  text-decoration: none;
-  color: inherit;
+  color: #444;
+  font-weight: 500;
+  font-size: 1.1rem;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
 }
 
 .nav-cont {
@@ -25,57 +20,55 @@
   justify-content: space-around;
   align-items: center;
   flex-direction: row;
-  border: 1px solid rgb(7, 0, 57);
   width: 80%;
-  border-radius: 20px;
-  background: #f2f3f7d6;
-  box-shadow: 20px 20px 60px #00000029, -20px -20px 60px #0000002b;
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: var(--shadow-panel);
 }
 
 .nav-icon {
-  height: 50%;
+  height: 44%;
   object-fit: contain;
-  transition: 0.3s;
+  transition: transform 0.2s ease;
 }
 
 .icon-cont {
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
-  text-wrap: wrap;
   justify-content: center;
+  gap: var(--space-xs);
   height: 100%;
   width: 100%;
-  align-content: center;
-  transition: 0.3s;
   text-decoration: none;
+  transition: transform 0.2s ease;
 }
 
 .icon-cont:hover {
   cursor: pointer;
-  transform: scale(1.1);
+  transform: translateY(-2px);
 }
 
-.active {
-  transition: 0.2s;
+.icon-cont.active .logo-text {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
 }
 
-@media screen and (max-width: 876px) {
+@media screen and (max-width: 768px) {
   .logo-text {
-    font-size: 1rem;
+    font-size: 0.95rem;
   }
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 480px) {
   .nav-box {
-    height: 60px;
+    height: 56px;
   }
   .nav-cont {
-    width: 90vw;
+    width: 92vw;
   }
 
   .logo-text {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
 }

@@ -1,35 +1,13 @@
-const AboutBody = ({ activeTheme }) => {
-  //apply theme to text and bg
-  const themeFixer = () => {
-    let fill = {};
-    if (activeTheme === "snow") {
-      fill.fill = "#009bef";
-      fill.background = "red";
-      return "#009bef";
-    } else if (activeTheme === "summer") {
-      fill.fill = "#F4653E";
-      return "#F4653E";
-    } else if (activeTheme === "spring") {
-      fill.fill = "#E5B700";
-      return "#E5B700";
-    } else if (activeTheme === "fall") {
-      fill.fill = "#CA0000";
-      return "#CA0000";
-    }
-    return { fill };
-  };
-
-  const { fill } = themeFixer();
-
+const AboutBody = () => {
   return (
     <div className="about-body fade-in">
       <div className="about-h-box">
-        <div style={{ color: themeFixer() }} className="about-h">
+        <div className="about-h">
           {Array.from("Welcome!").map((letter, index) => (
             <span
               key={index}
               className="fade-in-letter"
-              style={{ animationDelay: `${index * 0.1}s`, ...fill }}
+              style={{ animationDelay: `${index * 0.1}s` }}
             >
               {letter}
             </span>
@@ -37,13 +15,8 @@ const AboutBody = ({ activeTheme }) => {
         </div>
       </div>
       <div className="about-p">
-        <span style={{ fontWeight: "bold", color: themeFixer() }}>
-          Thank you
-        </span>{" "}
-        for checking out my portfolio! I am a{" "}
-        <span style={{ fontWeight: "bold", color: themeFixer() }}>
-          software engineer
-        </span>{" "}
+        <span className="accent-text">Thank you</span> for checking out my
+        portfolio! I am a <span className="accent-text">software engineer</span>{" "}
         with experience in building web applications from the ground up, who
         always finds zeal in debugging errors and finding more efficient
         approach to problems.
@@ -58,19 +31,13 @@ const AboutBody = ({ activeTheme }) => {
         the desire to keep learning and building my knowledge to become the most
         optimal problem-solver as a programmer. Since graduating I've worked two
         roles, one as a{" "}
-        <span style={{ fontWeight: "bold", color: themeFixer() }}>
-          Full Stack Software Engineer
-        </span>{" "}
+        <span className="accent-text">Full Stack Software Engineer</span>{" "}
         developing an Agile Chatbot for Scrummasters and another as a{" "}
-        <span style={{ fontWeight: "bold", color: themeFixer() }}>
-          Frontend Engineer
-        </span>{" "}
-        developing solutions for a medical marketing company. I am looking for a
+        <span className="accent-text">Frontend Engineer</span> developing
+        solutions for a medical marketing company. I am looking for a
         full-time opportunity to keep this flame going! Try the{" "}
-        <span style={{ fontWeight: "bold", color: themeFixer() }}>
-          theme switcher
-        </span>{" "}
-        at the bottom of the page!
+        <span className="accent-text">theme switcher</span> at the bottom of
+        the page!
       </div>
 
       <div className="about-p">
@@ -84,7 +51,6 @@ const AboutBody = ({ activeTheme }) => {
           className="about-icon"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 512 512"
-          style={{ background: themeFixer() }}
         >
           <path
             fill="#fff"
@@ -96,7 +62,6 @@ const AboutBody = ({ activeTheme }) => {
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 32 32"
           fill="#fff"
-          style={{ background: themeFixer() }}
         >
           <path
             d="M3.7,31H14c1.8,0,3.5-1.1,4.3-2.7l12-25.6C30.6,1.9,30,1,29.2,1h-1.4c-0.5,0-0.9,0.3-1.1,0.7L16.5,23.9
@@ -110,7 +75,6 @@ const AboutBody = ({ activeTheme }) => {
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 -3.84 122.88 122.88"
           fill="#fff"
-          style={{ background: themeFixer() }}
         >
           <path d="M29.03,100.46l20.79-25.21l9.51,12.13L41,110.69C33.98,119.61,20.99,110.21,29.03,100.46L29.03,100.46z M53.31,43.05 c1.98-6.46,1.07-11.98-6.37-20.18L28.76,1c-2.58-3.03-8.66,1.42-6.12,5.09L37.18,24c2.75,3.34-2.36,7.76-5.2,4.32L16.94,9.8 c-2.8-3.21-8.59,1.03-5.66,4.7c4.24,5.1,10.8,13.43,15.04,18.53c2.94,2.99-1.53,7.42-4.43,3.69L6.96,18.32 c-2.19-2.38-5.77-0.9-6.72,1.88c-1.02,2.97,1.49,5.14,3.2,7.34L20.1,49.06c5.17,5.99,10.95,9.54,17.67,7.53 c1.03-0.31,2.29-0.94,3.64-1.77l44.76,57.78c2.41,3.11,7.06,3.44,10.08,0.93l0.69-0.57c3.4-2.83,3.95-8,1.04-11.34L50.58,47.16 C51.96,45.62,52.97,44.16,53.31,43.05L53.31,43.05z M65.98,55.65l7.37-8.94C63.87,23.21,99-8.11,116.03,6.29 C136.72,23.8,105.97,66,84.36,55.57l-8.73,11.09L65.98,55.65L65.98,55.65z" />
         </svg>
@@ -118,7 +82,6 @@ const AboutBody = ({ activeTheme }) => {
           className="about-icon"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 64 64"
-          style={{ background: themeFixer() }}
         >
           <path
             fill="#fff"
@@ -129,21 +92,21 @@ const AboutBody = ({ activeTheme }) => {
 	c-0.813,1.16-3.626,2.337-5.626,2.337C21.25,55.594,19.82,54.489,20.952,52.828z"
           />
           <path
-            fill={themeFixer()}
+            className="about-icon-accent"
             d="M31.854,8.292c-0.678,0-1.343,0.053-2,0.132c8.218,0.99,14.59,7.974,14.59,16.458v14.219
 	c0,0,0,6.162,0,9.006c0,1.896-0.947,3.792-2.844,5.688c-0.674,0.674-1.707,1.104-2.801,1.342c1.696,0.497,5.226,0.233,6.801-1.342
 	c1.896-1.896,2.844-3.791,2.844-5.688c0-2.844,0-9.006,0-9.006V24.882C48.444,15.719,41.018,8.292,31.854,8.292z"
           />
-          <ellipse fill={themeFixer()} cx="34.5" cy="37" rx="3.5" ry="5" />
+          <ellipse className="about-icon-accent" cx="34.5" cy="37" rx="3.5" ry="5" />
           <ellipse
-            fill={themeFixer()}
+            className="about-icon-accent"
             cx="29.959"
             cy="23.459"
             rx="2.37"
             ry="4.74"
           />
           <ellipse
-            fill={themeFixer()}
+            className="about-icon-accent"
             cx="38.49"
             cy="23.459"
             rx="2.37"
