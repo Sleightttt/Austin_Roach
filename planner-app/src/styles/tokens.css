@@ -1,10 +1,3 @@
-/*
-  Shared design tokens. Breakpoints aren't supported as CSS custom
-  properties inside @media conditions, so the values below (480 / 768 /
-  1024 / 1280) are just the literals every component's media queries
-  should use instead of the previous ad-hoc set.
-*/
-
 :root {
   --space-xs: 4px;
   --space-sm: 8px;

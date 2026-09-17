@@ -2,16 +2,19 @@ const AboutBody = () => {
   return (
     <div className="about-body fade-in">
       <div className="about-h-box">
-        <div className="about-h">
-          {Array.from("Welcome!").map((letter, index) => (
-            <span
-              key={index}
-              className="fade-in-letter"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              {letter}
-            </span>
-          ))}
+        <div className="about-h-wrap">
+          <div className="about-h">
+            {Array.from("Welcome!").map((letter, index) => (
+              <span
+                key={index}
+                className="fade-in-letter"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                {letter}
+              </span>
+            ))}
+          </div>
+          <span className="about-h-underline"></span>
         </div>
       </div>
       <div className="about-p">
