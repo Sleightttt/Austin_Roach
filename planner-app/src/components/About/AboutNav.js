@@ -48,7 +48,8 @@ const AboutNav = () => {
         TITLES.map((title, index) => (
           <div
             key={title}
-            className={`name-h2 ${initialLoad ? "slide-right" : ""} ${
+            style={{ "--i": index }}
+            className={`name-h2 stacked ${initialLoad ? "slide-right" : ""} ${
               currentTitleIndex === index ? "" : "hidden"
             } ${fadeIn ? "fade-in2" : "fade-out2"}`}
           >

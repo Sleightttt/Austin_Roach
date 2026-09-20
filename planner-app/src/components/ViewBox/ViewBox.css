@@ -8,7 +8,7 @@
   width: 90%;
   margin: var(--space-sm);
   border-radius: var(--radius-lg);
-  background: rgba(255, 255, 255, 0.7);
+  background: color-mix(in srgb, color-mix(in srgb, var(--bg) 35%, white) 75%, transparent);
   box-shadow: var(--shadow-panel);
   z-index: 1;
 }

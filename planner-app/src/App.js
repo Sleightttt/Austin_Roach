@@ -28,6 +28,12 @@ function App() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
+  // Mirror the theme onto <html> so the overscroll area behind .App
+  // (which shows html's background) picks up the theme's --bg too.
+  useEffect(() => {
+    document.documentElement.dataset.theme = activeTheme.name;
+  }, [activeTheme]);
+
   // Preload every theme's background image up front, so switching to a
   // theme for the first time doesn't stall the crossfade on a fetch.
   useEffect(() => {

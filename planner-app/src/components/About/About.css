@@ -36,6 +36,14 @@
   z-index: 2;
 }
 
+.name-h2.stacked {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: calc(30% + var(--i) * 10%);
+  margin-top: 0;
+}
+
 .aboutnav-cont {
   position: relative;
   margin: 5%;

@@ -17,6 +17,12 @@
   initial-value: #009bef;
 }
 
+@property --bg {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #e4e6e7;
+}
+
 @property --gradient-start {
   syntax: "<color>";
   inherits: true;
@@ -30,29 +36,37 @@
 }
 
 [data-theme="snow"] {
+  --bg: #e4e6e7;
   --accent: #009bef;
   --gradient-start: #19a2eb;
   --gradient-end: #13618c;
 }
 
 [data-theme="spring"] {
+  --bg: #d4e9f9;
   --accent: #e5b700;
   --gradient-start: #e5b700;
   --gradient-end: #f4653e;
 }
 
 [data-theme="summer"] {
+  --bg: #fdaaba;
   --accent: #f4653e;
   --gradient-start: #ffaada;
   --gradient-end: #f4653e;
 }
 
 [data-theme="fall"] {
+  --bg: #836e65;
   --accent: #ca0000;
   --gradient-start: #ff8235;
   --gradient-end: #ca0000;
 }
 
 .App {
-  --gradient: linear-gradient(125deg, var(--gradient-start), var(--gradient-end));
+  --gradient: linear-gradient(
+    125deg,
+    var(--gradient-start),
+    var(--gradient-end)
+  );
 }

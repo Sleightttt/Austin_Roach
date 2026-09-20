@@ -7,15 +7,20 @@ html {
   margin: 0;
   padding: 0;
   height: 100%;
-  background: #f0f2ff;
   font-family: var(--font-body);
+}
+
+html {
+  background: var(--bg);
+  transition: --bg 1s ease;
 }
 
 .App {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  transition: --accent 1s ease, --gradient-start 1s ease, --gradient-end 1s ease;
+  background: var(--bg);
+  transition: --bg 1s ease, --accent 1s ease, --gradient-start 1s ease, --gradient-end 1s ease;
 }
 
 .background-layer {
