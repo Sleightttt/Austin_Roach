@@ -37,15 +37,19 @@ html {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: 1;
+  z-index: 0;
+  opacity: 0;
+  transition: opacity 1s ease;
 }
 
-/* The incoming background image is layered on top of (and fades in
-   over) the current one, which stays put underneath until the
-   crossfade finishes and App promotes the new image. */
-.background-image.fade-in {
+.background-image.previous {
+  z-index: 1;
+  opacity: 1;
+}
+
+.background-image.active {
   z-index: 2;
-  animation: fadeIn 1s ease forwards;
+  opacity: 1;
 }
 
 .fade-in {

@@ -9,12 +9,9 @@ import Contact from "./components/Contact";
 import "./app.css";
 import { THEMES, DEFAULT_THEME } from "./theme";
 
-const TRANSITION_MS = 1000;
-
 function App() {
   const [activeTheme, setActiveTheme] = useState(DEFAULT_THEME);
-  const [baseBg, setBaseBg] = useState(DEFAULT_THEME.bg);
-  const [incomingBg, setIncomingBg] = useState(null);
+  const [prevTheme, setPrevTheme] = useState(null);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const dropdownRef = useRef(null);
 
@@ -34,50 +31,35 @@ function App() {
     document.documentElement.dataset.theme = activeTheme.name;
   }, [activeTheme]);
 
-  // Preload every theme's background image up front, so switching to a
-  // theme for the first time doesn't stall the crossfade on a fetch.
-  useEffect(() => {
-    THEMES.forEach((theme) => {
-      const img = new Image();
-      img.src = theme.bg;
-    });
-  }, []);
-
-  useEffect(() => {
-    if (!incomingBg) return undefined;
-
-    // Let the incoming image finish fading in on top of the old one
-    // before promoting it, so the crossfade never shows a "jump".
-    const timeout = setTimeout(() => {
-      setBaseBg(incomingBg);
-      setIncomingBg(null);
-    }, TRANSITION_MS);
-
-    return () => clearTimeout(timeout);
-  }, [incomingBg]);
-
   const handleThemeSelect = (theme) => {
     setDropdownOpen(false);
     if (theme.name === activeTheme.name) return;
     // Colors switch immediately - .App's CSS transition on --accent /
-    // --gradient-* animates them smoothly. The background image still
-    // needs a JS-managed crossfade since <img> src can't transition.
+    // --gradient-* animates them smoothly. Background images are all
+    // mounted at once and crossfaded by opacity, so no <img> src is ever
+    // swapped (swapping flashes the old image on mobile while decoding).
+    setPrevTheme(activeTheme);
     setActiveTheme(theme);
-    setIncomingBg(theme.bg);
   };
 
   return (
     <div className="App" data-theme={activeTheme.name}>
       <div className="background-layer">
-        <img draggable="false" className="background-image" src={baseBg} alt="" />
-        {incomingBg && (
+        {THEMES.map((theme) => (
           <img
+            key={theme.name}
             draggable="false"
-            className="background-image fade-in"
-            src={incomingBg}
+            className={`background-image ${
+              theme.name === activeTheme.name
+                ? "active"
+                : theme.name === prevTheme?.name
+                ? "previous"
+                : ""
+            }`}
+            src={theme.bg}
             alt=""
           />
-        )}
+        ))}
       </div>
 
       <NavBar />

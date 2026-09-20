@@ -20,7 +20,7 @@
 @property --bg {
   syntax: "<color>";
   inherits: true;
-  initial-value: #e4e6e7;
+  initial-value: #ecedee;
 }
 
 @property --gradient-start {
